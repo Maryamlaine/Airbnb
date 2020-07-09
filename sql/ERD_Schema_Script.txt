@@ -1,0 +1,102 @@
+review
+--
+review_id PK INT
+property_id INT FK >- property.property_id
+number_of_reviews INT 
+review_scores_rating INT
+review_scores_accuracy INT
+review_scores_checkin INT
+review_scores_communication INT
+review_scores_location INT
+review_scores_value INT
+comments VARCHAR
+
+host
+--
+host_id INT PK 
+host_url VARCHAR
+host_name VARCHAR
+host_since DATE
+host_is_superhost BIT
+host_response_time VARCHAR
+host_acceptence_rate INT
+
+property
+--
+property_id INT PK
+host_id INT FK -< host.host_id
+neighborhood_id INT FK >- neighborhood.neighborhood_id
+price_id INT FK -< price.price_id
+availability_id INT FK - availability.availability_id
+amenity_id INT FK >-< amenity.amenity_id
+listing_name VARCHAR
+listing_description VARCHAR
+property_type VARCHAR
+bedrooms INT
+bathrooms INT
+accommodates INT
+beds INT
+bed_type VARCHAR
+room_type VARCHAR
+minimum_nights INT
+maximum_nights INT
+extra_people_cost FLOAT
+
+amenity
+--
+amenity_id INT PK
+wireless_internet BIT
+air_conditioning BIT
+pool BIT
+self_check_in BIT
+private_entrance BIT
+breakfast BIT
+free_parking_on_premises BIT
+tv BIT
+gym BIT
+hot_tub BIT
+indoor_fireplace BIT
+heating BIT
+family_kid_friendly BIT
+washer BIT
+dryer BIT
+hangers BIT
+iron BIT
+shampoo BIT
+hair_dryer BIT
+high_chair BIT
+crib BIT
+carbon_monoxide_alarm BIT
+smoke_detector BIT
+babysitter_recommendations BIT
+pets_allowed BIT
+first_aid_kit BIT
+
+availability
+--
+availability_id INT PK
+availability_30 INT
+avilability_60 INT
+avilability_90 INT
+availabilty_365 INT
+
+price
+--
+price_id INT PK
+daily_price FLOAT
+weekly_price FLOAT
+monthly_price FLOAT
+cleaning_fee FLOAT
+security_deposit FLOAT
+
+
+neighborhood
+--
+neighborhood_id INT PK
+latitude FLOAT
+longitude FLOAT
+city VARCHAR
+state VARCHAR
+zipcode VARCHAR
+access VARCHAR
+transit VARCHAR
