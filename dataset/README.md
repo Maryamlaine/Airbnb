@@ -1,4 +1,4 @@
-We have totally 7 datasets which are stored in AWS S3. Five are stored in Github here, Two are stored in the cloud(since they are so large). 
+We have totally 7 datasets for our project. Five are stored in Github here, Two are stored in the cloud(since they are so large). 
 However, they are all could be downloaded from the AWS S3.
 
 Here are the AWS bucket links to the datasets:
