@@ -14,7 +14,7 @@ app = Flask(__name__)
 #################################################
 # Database Setup
 #################################################
-engine = create_engine("postgresql://postgres:postgres@data-analytics-airbnb.ce6e3hxllphz.us-east-2.rds.amazonaws.com")
+engine = create_engine("postgresql://postgres:postgres@data-analytics-airbnb.ce6e3hxllphz.us-east-2.rds.amazonaws.com/data_analytics_airbnb")
 # # reflect an existing database into a new model
 Base = automap_base()
 
