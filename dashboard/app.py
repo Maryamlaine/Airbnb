@@ -65,3 +65,45 @@ def pvisuals():
 @app.route("/tableau")
 def tableau():
     return render_template("tableau.html")
+
+@app.route("/cluster")
+def cluster():
+    return render_template("cluster.html")
+
+@app.route("/neighborhood")
+def neighborhoods():
+    sel = [neighborhood_table.latitude,
+       neighborhood_table.longitude,
+    #    neighborhood_table.city,
+    #    neighborhood_table.state,
+        neighborhood_table.zipcode]
+       
+       #func.avg(flight_table.arrival_delay),
+       #func.avg(flight_table.departure_delay)]
+
+    LAloc = session.query(*sel).all()
+                    #filter(flight_table.arrival_airport == airport_table.airport_id).\
+                    #filter_by(year = 2019).\
+                    # group_by(flight_table.arrival_airport,
+                    #         airport_table.airport_name,
+                    #         airport_table.city,
+                    #         airport_table.state,
+                    #         airport_table.longitude,
+                    #         airport_table.latitude).\
+                    #all()
+
+    nbr_list = []
+    for i in range(len(LAloc)):
+        LA_dict = {} 
+        LA_dict['latitude'] = LAloc[i][0]
+        LA_dict['longitude'] = LAloc[i][1]
+        # LA_dict['city'] = LAloc[i][2]
+        # LA_dict['state'] = LAloc[i][3]
+        LA_dict['zipcode'] = LAloc[i][2]
+       
+      
+        nbr_list.append(LA_dict)
+    
+
+    return jsonify(nbr_list)
+
