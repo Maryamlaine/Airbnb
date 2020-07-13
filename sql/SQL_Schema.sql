@@ -1,4 +1,4 @@
-﻿DROP TABLE IF EXISTS review;
+DROP TABLE IF EXISTS review;
 DROP TABLE IF EXISTS property;
 DROP TABLE IF EXISTS host;
 DROP TABLE IF EXISTS amenity;
@@ -119,6 +119,7 @@ CREATE TABLE "neighborhood" (
     "neighborhood_id" INT   NOT NULL,
     "latitude" FLOAT   NOT NULL,
     "longitude" FLOAT   NOT NULL,
+    "neighbourhood" VARCHAR NOT NULL,
     "city" VARCHAR,
     "state" VARCHAR,
     "zipcode" VARCHAR,
@@ -146,5 +147,4 @@ REFERENCES "availability" ("availability_id");
 
 ALTER TABLE "property" ADD CONSTRAINT "fk_property_amenity_id" FOREIGN KEY("amenity_id")
 REFERENCES "amenity" ("amenity_id");
-
 
