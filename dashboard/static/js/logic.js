@@ -43,7 +43,7 @@ d3.json(geoData, function(data) {
 
     // Binding a pop-up to each layer
     onEachFeature: function(feature, layer) {
-      layer.bindPopup("Zip Code: " + feature.properties.ZIP + "<br>Median Household Income:<br>" +
+      layer.bindPopup("Price: " + feature.properties.ZIP + "<br>Median Household Income:<br>" +
         "$" + feature.properties.MHI2016);
     }
   }).addTo(myMap);
@@ -57,7 +57,7 @@ d3.json(geoData, function(data) {
     var labels = [];
 
     // Add min & max
-    var legendInfo = "<h1>Median Income</h1>" +
+    var legendInfo = "<h1>Price</h1>" +
       "<div class=\"labels\">" +
         "<div class=\"min\">" + limits[0] + "</div>" +
         "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +

@@ -76,7 +76,7 @@ def geos():
     return render_template("geos.html")
 
 
-@app.route("/neighborhood")
+@app.route("/neighborhood", methods=['GET'])
 def neighborhoods():
     sel = [neighborhood_table.latitude,
        neighborhood_table.longitude,
@@ -87,16 +87,11 @@ def neighborhoods():
        #func.avg(flight_table.arrival_delay),
        #func.avg(flight_table.departure_delay)]
 
-    LAloc = session.query(*sel).all()
-                    #filter(flight_table.arrival_airport == airport_table.airport_id).\
-                    #filter_by(year = 2019).\
-                    # group_by(flight_table.arrival_airport,
-                    #         airport_table.airport_name,
-                    #         airport_table.city,
-                    #         airport_table.state,
-                    #         airport_table.longitude,
-                    #         airport_table.latitude).\
-                    #all()
+    LAloc = session.query(*sel).\
+                    filter(neighborhood_table.neighborhood_id == property_table.neighborhood_id).\
+                    filter(price_table.price_id == property_table.price_id).\
+                    filter(review_table.property_id == property_table.property_id).\
+                    all()
 
     nbr_list = []
     for i in range(len(LAloc)):
