@@ -3,7 +3,7 @@ from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, inspect, func
 
-from flask import Flask, jsonify, render_template
+from flask import Flask, jsonify, render_template,redirect
 from flask_sqlalchemy import SQLAlchemy
 
 #################################################
@@ -70,13 +70,19 @@ def tableau():
 def cluster():
     return render_template("cluster.html")
 
+@app.route("/geos")
+def geos():
+       # return redirect("/neighborhood", code=302)
+    return render_template("geos.html")
+
+
 @app.route("/neighborhood")
 def neighborhoods():
     sel = [neighborhood_table.latitude,
        neighborhood_table.longitude,
-    #    neighborhood_table.city,
+        price_table.daily_price,
     #    neighborhood_table.state,
-        neighborhood_table.zipcode]
+        review_table.review_scores_rating]
        
        #func.avg(flight_table.arrival_delay),
        #func.avg(flight_table.departure_delay)]
@@ -97,9 +103,9 @@ def neighborhoods():
         LA_dict = {} 
         LA_dict['latitude'] = LAloc[i][0]
         LA_dict['longitude'] = LAloc[i][1]
-        # LA_dict['city'] = LAloc[i][2]
+        LA_dict['daily_price'] = LAloc[i][2]
         # LA_dict['state'] = LAloc[i][3]
-        LA_dict['zipcode'] = LAloc[i][2]
+        LA_dict['review_scores_rating'] = LAloc[i][3]
        
       
         nbr_list.append(LA_dict)
