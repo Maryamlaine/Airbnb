@@ -31,41 +31,44 @@ $.ajax({
   //data: JSON.stringify(you can put in a variable in here to send data with the request),
   contentType: 'application/json;charset=UTF-8',
   success: function (response) {
-    console.log(response[2]);
-  
-      d3.json(geoData, function(response) { 
-        geojson = L.choropleth(response, {
-        
-        // Define what  property in the features to use
-        valueProperty: "MHI2016",
+    //console.log(response.length);
+    for (var i = 0; i < response.length; i++) {
+      console.log(response[i][0]);
 
-        // Set color scale
-        scale: ["#ffffb2", "#b10026"],
+        d3.json(geoData, function(response) { 
+          geojson = L.choropleth(response, {
+          
+          // Define what  property in the features to use
+          valueProperty: "MHI2016",
 
-        // Number of breaks in step range
-        steps: 10,
+          // Set color scale
+          scale: ["#ffffb2", "#b10026"],
 
-        // q for quartile, e for equidistant, k for k-means
-        mode: "q",
-        style: {
-          // Border color
-          color: "#fff",
-          weight: 1,
-          fillOpacity: 0.8
-        },
+          // Number of breaks in step range
+          steps: 10,
 
-        // Binding a pop-up to each layer
-        
-        onEachFeature: function(feature, layer) {
-          if (feature.properties && feature.properties.neighbourhood){
-          //layer.bindPopup(feature.properties.neighbourhood);
-          //console.log(feature);
-          layer.bindPopup("Neighborhood: " + feature.properties.neighbourhood + "<br>Price:<br>" +
-            "$" + response.daily_price + "<br>Review Score:<br>" + response.review_scores_rating);
+          // q for quartile, e for equidistant, k for k-means
+          mode: "q",
+          style: {
+            // Border color
+            color: "#fff",
+            weight: 1,
+            fillOpacity: 0.8
+          },
+
+          // Binding a pop-up to each layer
+          
+          onEachFeature: function(feature, layer) {
+            if (feature.properties && feature.properties.neighbourhood){
+            //layer.bindPopup(feature.properties.neighbourhood);
+            //console.log(feature);
+            layer.bindPopup("Neighborhood: " + feature.properties.neighbourhood + "<br>Price:<br>" +
+              "$" + response.daily_price + "<br>Review Score:<br>" + response.review_scores_rating);
+            }
           }
-        }
-      }).addTo(myMap);
-    });
+        }).addTo(myMap);
+      });
+    }  
   }
 });
   // // Set up the legend
