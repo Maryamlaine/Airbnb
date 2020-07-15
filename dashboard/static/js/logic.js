@@ -30,17 +30,17 @@ $.ajax({
   dataType: "json",
   //data: JSON.stringify(you can put in a variable in here to send data with the request),
   contentType: 'application/json;charset=UTF-8',
-  success: function (response) {
-      console.log(response);
-      }
+  //success: function (response) {
+  //    console.log(response);
+  //    }
   });
 //console.log(geoData)
-
+//var test = response;
 //console.log('CHECK HERE FOR DATA')
 
 // Grab data with d3
-d3.json(geoData, function(data) {
-  //console.log(response.latitude)
+d3.json(url, function(data) {
+  console.log(url.latitude)
   // Create a new choropleth layer
   geojson = L.choropleth(data, {
 
