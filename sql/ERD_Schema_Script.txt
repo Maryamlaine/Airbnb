@@ -95,6 +95,7 @@ neighborhood
 neighborhood_id INT PK
 latitude FLOAT
 longitude FLOAT
+neighbourhood VARCHAR
 city VARCHAR
 state VARCHAR
 zipcode VARCHAR
