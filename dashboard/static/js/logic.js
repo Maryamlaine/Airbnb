@@ -13,20 +13,34 @@ L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?acce
 }).addTo(myMap);
 
 // Load in geojson data
-var geoData = "/neighborhood";
+//var geoData = "/neighborhood";
 
 var geojson;
+//var geoData;
 // function myFunc(vars){
 //   console.log(vars)
 //   return vars
-//}
+//
 
-var geodata = document.getElementById('nbr_list')
-console.log(geodata)
-console.log('CHECK HERE FOR DATA')
+//var geodata = document.getElementById(test=geoData)
+
+$.ajax({
+  type : "GET",
+  url : '/neighborhood',
+  dataType: "json",
+  //data: JSON.stringify(you can put in a variable in here to send data with the request),
+  contentType: 'application/json;charset=UTF-8',
+  success: function (response) {
+      console.log(response);
+      }
+  });
+//console.log(geoData)
+
+//console.log('CHECK HERE FOR DATA')
+
 // Grab data with d3
-d3.json(geodata, function(data) {
-
+d3.json(geoData, function(data) {
+  //console.log(response.latitude)
   // Create a new choropleth layer
   geojson = L.choropleth(data, {
 
@@ -50,7 +64,7 @@ d3.json(geodata, function(data) {
 
     // Binding a pop-up to each layer
     onEachFeature: function(feature, layer) {
-      layer.bindPopup("Price: " + geodata.daily_price + "<br>Median Household Income:<br>" +
+      layer.bindPopup("Zip Code: " + feature.properties.ZIP + "<br>Median Household Income:<br>" +
         "$" + feature.properties.MHI2016);
     }
   }).addTo(myMap);

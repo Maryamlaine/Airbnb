@@ -76,16 +76,17 @@ def geos():
     return render_template("geos.html")
 
 
-@app.route("/neighborhood",methods=['GET'] )
+@app.route("/neighborhood")
 def neighborhoods():
+    
     sel = [neighborhood_table.latitude,
-       neighborhood_table.longitude,
+    neighborhood_table.longitude,
         price_table.daily_price,
     #    neighborhood_table.state,
         review_table.review_scores_rating]
-       
-       #func.avg(flight_table.arrival_delay),
-       #func.avg(flight_table.departure_delay)]
+    
+    #func.avg(flight_table.arrival_delay),
+    #func.avg(flight_table.departure_delay)]
 
     LAloc = session.query(*sel).\
                     filter(neighborhood_table.neighborhood_id == property_table.neighborhood_id).\
@@ -105,10 +106,13 @@ def neighborhoods():
         LA_dict['daily_price'] = LAloc[i][2]
         # LA_dict['state'] = LAloc[i][3]
         LA_dict['review_scores_rating'] = LAloc[i][3]
-       
-      
+    
+    
         nbr_list.append(LA_dict)
-        
 
+        #test = jsonify(nbr_list)
     #return render_template("geos.html",data=LA_dict)
     return jsonify(nbr_list)
+
+if __name__ == "__main__":
+    app.run(debug = True)    
