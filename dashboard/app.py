@@ -81,9 +81,9 @@ def neighborhoods():
     
     sel = [neighborhood_table.latitude,
     neighborhood_table.longitude,
-        price_table.daily_price,
-    #    neighborhood_table.state,
-        review_table.review_scores_rating]
+    price_table.daily_price,
+    neighborhood_table.neighbourhood,
+    review_table.review_scores_rating]
     
     #func.avg(flight_table.arrival_delay),
     #func.avg(flight_table.departure_delay)]
@@ -104,8 +104,8 @@ def neighborhoods():
         LA_dict['latitude'] = LAloc[i][0]
         LA_dict['longitude'] = LAloc[i][1]
         LA_dict['daily_price'] = LAloc[i][2]
-        # LA_dict['state'] = LAloc[i][3]
-        LA_dict['review_scores_rating'] = LAloc[i][3]
+        LA_dict['neighborhood'] = LAloc[i][3]
+        LA_dict['review_scores_rating'] = LAloc[i][4]
     
     
         nbr_list.append(LA_dict)

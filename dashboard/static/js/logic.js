@@ -13,8 +13,8 @@ L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?acce
 }).addTo(myMap);
 
 // Load in geojson data
-//var geoData = "/neighborhood";
-
+var geoData = "static/data/neighbourhoods.geojson";
+console.log(geoData);
 var geojson;
 //var geoData;
 // function myFunc(vars){
@@ -30,71 +30,139 @@ $.ajax({
   dataType: "json",
   //data: JSON.stringify(you can put in a variable in here to send data with the request),
   contentType: 'application/json;charset=UTF-8',
-  //success: function (response) {
-  //    console.log(response);
-  //    }
-  });
+  success: function (response) {
+    console.log(response[2]);
+  
+      d3.json(geoData, function(response) { 
+        geojson = L.choropleth(response, {
+        
+        // Define what  property in the features to use
+        valueProperty: "MHI2016",
+
+        // Set color scale
+        scale: ["#ffffb2", "#b10026"],
+
+        // Number of breaks in step range
+        steps: 10,
+
+        // q for quartile, e for equidistant, k for k-means
+        mode: "q",
+        style: {
+          // Border color
+          color: "#fff",
+          weight: 1,
+          fillOpacity: 0.8
+        },
+
+        // Binding a pop-up to each layer
+        
+        onEachFeature: function(feature, layer) {
+          if (feature.properties && feature.properties.neighbourhood){
+          //layer.bindPopup(feature.properties.neighbourhood);
+          //console.log(feature);
+          layer.bindPopup("Neighborhood: " + feature.properties.neighbourhood + "<br>Price:<br>" +
+            "$" + response.daily_price + "<br>Review Score:<br>" + response.review_scores_rating);
+          }
+        }
+      }).addTo(myMap);
+    });
+  }
+});
+  // // Set up the legend
+//     var legend = L.control({ position: "bottomright" });
+//     legend.onAdd = function() {
+//       var div = L.DomUtil.create("div", "info legend");
+//       var limits = geojson.options.limits;
+//       var colors = geojson.options.colors;
+//       var labels = [];
+
+//       // Add min & max
+//       var legendInfo = "<h1>Price</h1>" +
+//         "<div class=\"labels\">" +
+//           "<div class=\"min\">" + limits[0] + "</div>" +
+//           "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
+//         "</div>";
+
+//       div.innerHTML = legendInfo;
+
+//       limits.forEach(function(limit, index) {
+//         labels.push("<li style=\"background-color: " + colors[index] + "\"></li>");
+//       });
+
+//       div.innerHTML += "<ul>" + labels.join("") + "</ul>";
+//       return div;
+//     };
+
+//   // Adding legend to the map
+//   legend.addTo(myMap);
+
+//   },
+      
+// });
+  
+
+
 //console.log(geoData)
 //var test = response;
 //console.log('CHECK HERE FOR DATA')
 
 // Grab data with d3
-d3.json(url, function(data) {
-  console.log(url.latitude)
-  // Create a new choropleth layer
-  geojson = L.choropleth(data, {
+// d3.json(url, function(data) {
+//   console.log(url.latitude)
+//   // Create a new choropleth layer
+//   geojson = L.choropleth(data, {
 
-    // Define what  property in the features to use
-    valueProperty: "MHI2016",
+//     // Define what  property in the features to use
+//     valueProperty: "MHI2016",
 
-    // Set color scale
-    scale: ["#ffffb2", "#b10026"],
+//     // Set color scale
+//     scale: ["#ffffb2", "#b10026"],
 
-    // Number of breaks in step range
-    steps: 10,
+//     // Number of breaks in step range
+//     steps: 10,
 
-    // q for quartile, e for equidistant, k for k-means
-    mode: "q",
-    style: {
-      // Border color
-      color: "#fff",
-      weight: 1,
-      fillOpacity: 0.8
-    },
+//     // q for quartile, e for equidistant, k for k-means
+//     mode: "q",
+//     style: {
+//       // Border color
+//       color: "#fff",
+//       weight: 1,
+//       fillOpacity: 0.8
+//     },
 
-    // Binding a pop-up to each layer
-    onEachFeature: function(feature, layer) {
-      layer.bindPopup("Zip Code: " + feature.properties.ZIP + "<br>Median Household Income:<br>" +
-        "$" + feature.properties.MHI2016);
-    }
-  }).addTo(myMap);
+//     // Binding a pop-up to each layer
+//     onEachFeature: function(feature, layer) {
+//       layer.bindPopup("Zip Code: " + feature.properties.ZIP + "<br>Median Household Income:<br>" +
+//         "$" + feature.properties.MHI2016);
+//     }
+//   }).addTo(myMap);
 
-  // Set up the legend
-  var legend = L.control({ position: "bottomright" });
-  legend.onAdd = function() {
-    var div = L.DomUtil.create("div", "info legend");
-    var limits = geojson.options.limits;
-    var colors = geojson.options.colors;
-    var labels = [];
+//   // Set up the legend
+//   var legend = L.control({ position: "bottomright" });
+//   legend.onAdd = function() {
+//     var div = L.DomUtil.create("div", "info legend");
+//     var limits = geojson.options.limits;
+//     var colors = geojson.options.colors;
+//     var labels = [];
 
-    // Add min & max
-    var legendInfo = "<h1>Price</h1>" +
-      "<div class=\"labels\">" +
-        "<div class=\"min\">" + limits[0] + "</div>" +
-        "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
-      "</div>";
+//     // Add min & max
+//     var legendInfo = "<h1>Price</h1>" +
+//       "<div class=\"labels\">" +
+//         "<div class=\"min\">" + limits[0] + "</div>" +
+//         "<div class=\"max\">" + limits[limits.length - 1] + "</div>" +
+//       "</div>";
 
-    div.innerHTML = legendInfo;
+//     div.innerHTML = legendInfo;
 
-    limits.forEach(function(limit, index) {
-      labels.push("<li style=\"background-color: " + colors[index] + "\"></li>");
-    });
+//     limits.forEach(function(limit, index) {
+//       labels.push("<li style=\"background-color: " + colors[index] + "\"></li>");
+//     });
 
-    div.innerHTML += "<ul>" + labels.join("") + "</ul>";
-    return div;
-  };
+//     div.innerHTML += "<ul>" + labels.join("") + "</ul>";
+//     return div;
+//   };
 
-  // Adding legend to the map
-  legend.addTo(myMap);
+//   // Adding legend to the map
+//   legend.addTo(myMap);
 
-});
+//});
