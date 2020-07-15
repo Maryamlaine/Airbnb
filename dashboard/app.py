@@ -76,7 +76,7 @@ def geos():
     return render_template("geos.html")
 
 
-@app.route("/neighborhood", methods=['GET'])
+@app.route("/neighborhood",methods=['GET'] )
 def neighborhoods():
     sel = [neighborhood_table.latitude,
        neighborhood_table.longitude,
@@ -91,6 +91,10 @@ def neighborhoods():
                     filter(neighborhood_table.neighborhood_id == property_table.neighborhood_id).\
                     filter(price_table.price_id == property_table.price_id).\
                     filter(review_table.property_id == property_table.property_id).\
+                    filter(review_table.review_scores_rating != None).\
+                    filter(neighborhood_table.latitude != None).\
+                    filter(neighborhood_table.longitude != None).\
+                    filter(price_table.daily_price != None).\
                     all()
 
     nbr_list = []
@@ -104,7 +108,7 @@ def neighborhoods():
        
       
         nbr_list.append(LA_dict)
-    
+        
 
+    #return render_template("geos.html",data=LA_dict)
     return jsonify(nbr_list)
-

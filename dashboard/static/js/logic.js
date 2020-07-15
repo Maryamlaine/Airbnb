@@ -16,9 +16,16 @@ L.tileLayer("https://api.mapbox.com/styles/v1/mapbox/{id}/tiles/{z}/{x}/{y}?acce
 var geoData = "/neighborhood";
 
 var geojson;
+// function myFunc(vars){
+//   console.log(vars)
+//   return vars
+//}
 
+var geodata = document.getElementById('nbr_list')
+console.log(geodata)
+console.log('CHECK HERE FOR DATA')
 // Grab data with d3
-d3.json(geoData, function(data) {
+d3.json(geodata, function(data) {
 
   // Create a new choropleth layer
   geojson = L.choropleth(data, {
@@ -43,7 +50,7 @@ d3.json(geoData, function(data) {
 
     // Binding a pop-up to each layer
     onEachFeature: function(feature, layer) {
-      layer.bindPopup("Price: " + feature.properties.ZIP + "<br>Median Household Income:<br>" +
+      layer.bindPopup("Price: " + geodata.daily_price + "<br>Median Household Income:<br>" +
         "$" + feature.properties.MHI2016);
     }
   }).addTo(myMap);
