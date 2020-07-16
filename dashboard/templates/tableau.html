@@ -18,6 +18,7 @@
 
   <!-- Custom styles for this template -->
   <link href="../static/css/business-casual.min.css" rel="stylesheet">
+  <link href="../static/style.css" rel="stylesheet">
 
 </head>
 
@@ -45,22 +46,22 @@
           <li class="nav-item px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="about.html">About Project</a>
           </li>
-          <li class="nav-item active dropdown px-lg-4">
-            <a class="nav-link dropdown-toggle text-uppercase text-expanded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Predicted PLACEHOLDER
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item text-uppercase text-expanded" href="pvisuals.html">Predicted Visuals PLACEHOLDER</a>
-              <a class="dropdown-item text-uppercase text-expanded" href="tableau.html">Tableau PLACEHOLDER</a>
-            </div>
-          </li>
           <li class="nav-item dropdown px-lg-4">
             <a class="nav-link dropdown-toggle text-uppercase text-expanded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Actual PLACEHOLDER
+              Machine Learning
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item text-uppercase text-expanded" href="avisuals.html">Actual Visuals PLACEHOLDER</a>
-              <a class="dropdown-item text-uppercase text-expanded" href="neuralnet.html">Neural Net PLACEHOLDER</a>
+              <a class="dropdown-item text-uppercase text-expanded" href="machinelearning.html">Machine Learning Models</a>
+              <a class="dropdown-item text-uppercase text-expanded" href="machinelearningvis.html">Machine Learning Visualizations</a>
+            </div>
+          </li>
+          <li class="nav-item active dropdown px-lg-4">
+            <a class="nav-link dropdown-toggle text-uppercase text-expanded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Visualizations
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item text-uppercase text-expanded" href="tableau.html">Tableau Dashboard</a>
+              <a class="dropdown-item text-uppercase text-expanded" href="visuals.html">Further Visuals</a>
             </div>
           </li>
         </ul>
@@ -70,38 +71,38 @@
 
   <div class="container-fluid">
     <div class="row">
-      <div class="col-md-8">
+      <div class="col-md-8 offset-md-2">
       <br>
         <div class="title-header bg">
-          <h3 class="title-header text-light">PLACEHOLDER TEXT</h3>
-          <embed src="../static/img/pdf1.pdf" type="application/pdf" width="100%" height="890px">
-                  
-          <div class="bg text-light">
-          <p>PLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXT</p>
-          </div>
-
+          <h3 class="title-header text-light text-center">AIRBNB TABLEAU DASHBOARD</h3>
+            <div class='tableauPlaceholder' id='viz1594874370195' style='position: relative'>
+              <noscript>
+                <a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ai&#47;AirbnbDashboard_15948743321440&#47;AirbnbDashboard&#47;1_rss.png' style='border: none' /></a>
+              </noscript>
+              <object class='tableauViz'  style='display:none;'>
+                <param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> 
+                <param name='embed_code_version' value='3' /> 
+                <param name='site_root' value='' />
+                <param name='name' value='AirbnbDashboard_15948743321440&#47;AirbnbDashboard' />
+                <param name='tabs' value='no' />
+                <param name='toolbar' value='yes' />
+                <param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Ai&#47;AirbnbDashboard_15948743321440&#47;AirbnbDashboard&#47;1.png' /> 
+                <param name='animate_transition' value='yes' />
+                <param name='display_static_image' value='yes' />
+                <param name='display_spinner' value='yes' />
+                <param name='display_overlay' value='yes' />
+                <param name='display_count' value='yes' />
+                <param name='language' value='en-GB' />
+                <param name='filter' value='publish=yes' />
+              </object>
+            </div>
         </div>
-      <br>
       </div>
     </div>
   </div>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-8">
-      <br>
-        <div class="title-header bg">
-          <h3 class="title-header text-light">PLACEHOLDER TEXT</h3>
-          <embed src="../static/img/pdf1.pdf" type="application/pdf" width="100%" height="890px">
-                  
-          <div class="bg text-light">
-          <p>PLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXT</p>
-          </div>
-
-        </div>
-      <br>
-      </div>
-    </div>
+  <div class="bg text-light">
+    <a href="visuals.html"><p style="position: relative;text-align: right;font-size: 18px;padding-right: 2%;">Explore More Visualizations</p></a>
   </div>
 
   <footer class="footer text-faded text-center py-5">
@@ -110,6 +111,19 @@
     </div>
   </footer>
 
+  <script type='text/javascript'>
+    var divElement = document.getElementById('viz1594874370195');
+    var vizElement = divElement.getElementsByTagName('object')[0];
+    if ( divElement.offsetWidth > 800 ) 
+      { vizElement.style.width='100%';vizElement.style.maxWidth='1980px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';vizElement.style.maxHeight='1200px';}
+    else if ( divElement.offsetWidth > 500 ) 
+      { vizElement.style.width='100%';vizElement.style.maxWidth='1980px';vizElement.style.height=(divElement.offsetWidth*0.75)+'px';vizElement.style.maxHeight='1200px';} 
+    else 
+      { vizElement.style.width='100%';vizElement.style.height='2727px';}
+    var scriptElement = document.createElement('script');
+    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';
+    vizElement.parentNode.insertBefore(scriptElement, vizElement);
+  </script>
   <!-- Bootstrap core JavaScript -->
   <script src="../static/vendor/jquery/jquery.min.js"></script>
   <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
