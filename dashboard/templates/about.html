@@ -5,10 +5,10 @@
 
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="About Page">
+  <meta name="author" content="BootcampAirBnB Team 2020">
 
-  <title>Data Analytics - Final Proj</title>
+  <title>About the Project</title>
 
   <!-- Bootstrap core CSS -->
   <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -18,16 +18,18 @@
   <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
 
   <!-- Custom styles for this template -->
+  <link href="../static/css/style.css" rel="stylesheet">
   <link href="../static/css/business-casual.min.css" rel="stylesheet">
 
 </head>
 
 <body>
 
-  <h1 class="site-heading text-center text-white d-none d-lg-block">
+  <a name="top"></a>
+  <a href="index.html" style="text-decoration: none;"><h1 class="site-heading text-center text-white d-none d-lg-block">
     <span class="site-heading-upper text-primary mb-3">Los Angeles AirBnB</span>
     <span class="site-heading-lower">Hedonic Pricing Analysis</span>
-  </h1>
+  </h1></a>
 
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
@@ -43,25 +45,25 @@
               <span class="sr-only">(current)</span>
             </a>
           </li>
-          <li class="nav-item active px-lg-4">
+          <li class="nav-item active dropdown px-lg-4">
             <a class="nav-link text-uppercase text-expanded" href="about.html">About Project</a>
           </li>
           <li class="nav-item dropdown px-lg-4">
             <a class="nav-link dropdown-toggle text-uppercase text-expanded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Predicted PLACEHOLDER
+              Machine Learning
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item text-uppercase text-expanded" href="pvisuals.html">Predicted Visuals PLACEHOLDER</a>
-              <a class="dropdown-item text-uppercase text-expanded" href="tableau.html">Tableau PLACEHOLDER</a>
+              <a class="dropdown-item text-uppercase text-expanded" href="machinelearning.html">Machine Learning Models</a>
+              <a class="dropdown-item text-uppercase text-expanded" href="machinelearningvis.html">Machine Learning Visualizations</a>
             </div>
           </li>
           <li class="nav-item dropdown px-lg-4">
             <a class="nav-link dropdown-toggle text-uppercase text-expanded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Actual PLACEHOLDER
+              Visualizations
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item text-uppercase text-expanded" href="avisuals.html">Actual Visuals PLACEHOLDER</a>
-              <a class="dropdown-item text-uppercase text-expanded" href="neuralnet.html">Neural Net PLACEHOLDER</a>
+              <a class="dropdown-item text-uppercase text-expanded" href="index_choropleth.html">Map Exploration</a>
+              <a class="dropdown-item text-uppercase text-expanded" href="visuals.html">Further Visuals</a>
             </div>
           </li>
         </ul>
@@ -77,11 +79,14 @@
           <div class="col-xl-9 col-lg-10 mx-auto">
             <div class="bg-faded rounded p-5">
               <h2 class="section-heading mb-4">
-                <span class="section-heading-upper">PLACEHOLDER TEXT</span>
-                <span class="section-heading-lower">PLACEHOLDER TEXT</span>
+                <span class="section-heading-upper">LA AirBnB</span>
+                <span class="section-heading-lower">Hedonic Pricing Analysis</span>
               </h2>
-              <p>PLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXT</p>
-              <p class="mb-0">PLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXTPLACEHOLDER TEXT</p>
+              <p class="mb-3">Here we should mention and briefly describe the machine learning models we decided to use for our predictions. Should mention the visuals we created and why.</p>
+              <p class="mb-3">Should discuss why we decided to explore the pricing of the airbnbs, the reviews, and the host response time (if we still are doing anything with the host response time).</p><br>
+              <div class="intro-button mx-auto text-center">
+                <a class="btn btn-primary btn-xl" href="https://github.com/Maryamlaine/Airbnb" target="_blank" rel="noopener noreferrer">Project GitHub</a>
+              </div>
             </div>
           </div>
         </div>
@@ -89,9 +94,90 @@
     </div>
   </section>
 
+  <!-- Team Header -->
+  <header style="background-color: rgba(47, 23, 15, 0.9);" class="text-center py-4 mb-4">
+    <div class="container">
+      <h1 class="font-weight-light text-white">The Team Behind the Project</h1>
+    </div>
+  </header>
+
+  <!-- Team -->
+  <section class="team-section bg-black" id="team">
+    <div class="container">
+      <div class="row justify-content-center">
+          <div class="col-md-3 mb-3 mb-md-0">
+              <div class="card py-4 h-100">
+                  <div class="card-body text-center">
+                      <h4 class="text-uppercase m-0">Maryam Tabatabaei</h4>
+                      <hr class="my-4" />
+                      <div class="small text-black-50">GitHub: <a href="https://github.com/Maryamlaine" target="_blank" rel="noopener noreferrer">Maryamlaine</a></div>
+                  </div>
+              </div>
+          </div>
+          <div class="col-md-3 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+                <div class="card-body text-center">
+                    <h4 class="text-uppercase m-0">Andrew McGraw</h4>
+                    <hr class="my-4" />
+                    <div class="small text-black-50">GitHub: <a href="https://github.com/AndrewMac34" target="_blank" rel="noopener noreferrer">AndrewMac34</a></div>
+                </div>
+            </div>
+          </div>
+          <div class="col-md-3 mb-3 mb-md-0">
+            <div class="card py-4 h-100">
+                <div class="card-body text-center">
+                    <h4 class="text-uppercase m-0">Nathanuel Martin</h4>
+                    <hr class="my-4" />
+                    <div class="small text-black-50">GitHub: <a href="https://github.com/Nate357" target="_blank" rel="noopener noreferrer">Nate357</a></div>
+                </div>
+            </div>
+          </div>
+      </div>
+      <br>
+      <div class="row justify-content-center">
+        <div class="col-md-3 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                  <h4 class="text-uppercase m-0">Qixuan Wang</h4>
+                  <hr class="my-4" />
+                  <div class="small text-black-50">GitHub: <a href="https://github.com/wiseqx" target="_blank" rel="noopener noreferrer">wiseqx</a></div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                  <h4 class="text-uppercase m-0">Karly Ringstad</h4>
+                  <hr class="my-4" />
+                  <div class="small text-black-50">GitHub: <a href="https://github.com/karlyringstad" target="_blank" rel="noopener noreferrer">karlyringstad</a></div>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3 mb-3 mb-md-0">
+          <div class="card py-4 h-100">
+              <div class="card-body text-center">
+                  <h4 class="text-uppercase m-0">Cade Schkerke</h4>
+                  <hr class="my-4" />
+                  <div class="small text-black-50">GitHub: <a href="https://github.com/caschkerke/" target="_blank" rel="noopener noreferrer">caschkerke</a></div>
+              </div>
+          </div>
+      </div>
+      </div>
+      <div class="social d-flex justify-content-center">
+          <a class="mx-2" href="#!"><i class="fab fa-twitter"></i></a><a class="mx-2" href="#!"><i class="fab fa-facebook-f"></i></a><a class="mx-2" href="#!"><i class="fab fa-github"></i></a>
+      </div>
+    </div>
+  </section>
+
+  <br>
+
+  <a href="#top"><p style="position: relative;text-align: right;font-size: 16px;padding-right: 2%;">Back To Top</p></a>
+
+  <br>
+
   <footer class="footer text-faded text-center py-5">
     <div class="container">
-      <p class="m-0 small">Copyright &copy; BootcampAirBnB Team 2020</p>
+      <p class="m-0 small">Copyright &copy; <a href="https://github.com/Maryamlaine/Airbnb" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">BootcampAirBnB Team 2020</a></p>
     </div>
   </footer>
 
