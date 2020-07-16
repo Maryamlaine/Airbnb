@@ -1,7 +1,7 @@
 import sqlalchemy
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
-from sqlalchemy import create_engine, inspect, func
+from sqlalchemy import create_engine, inspect, func, desc
 
 from flask import Flask, jsonify, render_template,redirect
 from flask_sqlalchemy import SQLAlchemy
@@ -79,11 +79,9 @@ def geos():
 @app.route("/neighborhood")
 def neighborhoods():
     
-    sel = [neighborhood_table.latitude,
-    neighborhood_table.longitude,
-    price_table.daily_price,
-    neighborhood_table.neighbourhood,
-    review_table.review_scores_rating]
+    sel = [neighborhood_table.neighbourhood,
+    func.avg(price_table.daily_price),
+    func.avg(review_table.review_scores_rating)]
     
     #func.avg(flight_table.arrival_delay),
     #func.avg(flight_table.departure_delay)]
@@ -96,16 +94,17 @@ def neighborhoods():
                     filter(neighborhood_table.latitude != None).\
                     filter(neighborhood_table.longitude != None).\
                     filter(price_table.daily_price != None).\
+                    group_by(neighborhood_table.neighbourhood).\
                     all()
 
     nbr_list = []
     for i in range(len(LAloc)):
         LA_dict = {} 
-        LA_dict['latitude'] = LAloc[i][0]
-        LA_dict['longitude'] = LAloc[i][1]
-        LA_dict['daily_price'] = LAloc[i][2]
-        LA_dict['neighborhood'] = LAloc[i][3]
-        LA_dict['review_scores_rating'] = LAloc[i][4]
+        LA_dict['neighbourhood'] = LAloc[i][0]
+        LA_dict['daily_price'] = round(float(LAloc[i][1]))
+        LA_dict['review_scores_rating'] = round(float(LAloc[i][2]))
+        #LA_dict['neighborhood'] = LAloc[i][3]
+        #LA_dict['review_scores_rating'] = LAloc[i][4]
     
     
         nbr_list.append(LA_dict)
