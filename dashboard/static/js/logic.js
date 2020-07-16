@@ -108,8 +108,8 @@ $.ajax({
             // Add min & max
             var legendInfo = "<h1>Price</h1>" +
               "<div class=\"labels\">" +
-                "<div class=\"min\">" + Math.min(...appendPrice) + "</div>" +
-                "<div class=\"max\">" + Math.max(...appendPrice) + "</div>" +
+                "<div class=\"min\">" + "$" + Math.min(...appendPrice) + "</div>" +
+                "<div class=\"max\">" + "$" + Math.max(...appendPrice) + "</div>" +
               "</div>";
 
             div.innerHTML = legendInfo;
