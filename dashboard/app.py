@@ -58,9 +58,6 @@ def avisuals():
 def neuralnet():
     return render_template("neuralnet.html")
 
-@app.route("/pvisuals")
-def pvisuals():
-    return render_template("pvisuals.html")
 
 @app.route("/tableau")
 def tableau():
