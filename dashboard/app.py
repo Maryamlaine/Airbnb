@@ -50,19 +50,66 @@ def index():
 def about():
     return render_template("about.html")
 
-@app.route("/avisuals")
-def avisuals():
-    return render_template("avisuals.html")
+@app.route("/machinelearning")
+def machinelearning():
+    return render_template("machinelearning.html")
 
-@app.route("/neuralnet")
-def neuralnet():
-    return render_template("neuralnet.html")
+@app.route("/machinelearningvis")
+def machinelearningvis():
+    return render_template("machinelearningvis.html")
 
-@app.route("/choropleth")
-def heatmap():
+@app.route("/index_choropleth")
+def index_choropleth():
     return render_template("index_choropleth.html")
- 
 
-@app.route("/tableau")
-def tableau():
-    return render_template("tableau.html")
+@app.route("/index_heatmap")
+def index_heatmap():
+    return render_template("index_heatmap.html")
+
+@app.route("/index_cluster")
+def index_cluster():
+    return render_template("index_cluster.html")
+
+@app.route("/visuals")
+def visuals():
+    return render_template("visuals.html")
+
+@app.route("/neighborhood")
+def neighborhoods():
+    
+    sel = [neighborhood_table.neighbourhood,
+    func.avg(price_table.daily_price),
+    func.avg(review_table.review_scores_rating)]
+    
+    #func.avg(flight_table.arrival_delay),
+    #func.avg(flight_table.departure_delay)]
+
+    LAloc = session.query(*sel).\
+                    filter(neighborhood_table.neighborhood_id == property_table.neighborhood_id).\
+                    filter(price_table.price_id == property_table.price_id).\
+                    filter(review_table.property_id == property_table.property_id).\
+                    filter(review_table.review_scores_rating != None).\
+                    filter(neighborhood_table.latitude != None).\
+                    filter(neighborhood_table.longitude != None).\
+                    filter(price_table.daily_price != None).\
+                    group_by(neighborhood_table.neighbourhood).\
+                    all()
+
+    nbr_list = []
+    for i in range(len(LAloc)):
+        LA_dict = {} 
+        LA_dict['neighbourhood'] = LAloc[i][0]
+        LA_dict['daily_price'] = round(float(LAloc[i][1]))
+        LA_dict['review_scores_rating'] = round(float(LAloc[i][2]))
+        #LA_dict['neighborhood'] = LAloc[i][3]
+        #LA_dict['review_scores_rating'] = LAloc[i][4]
+    
+    
+        nbr_list.append(LA_dict)
+
+        #test = jsonify(nbr_list)
+    #return render_template("geos.html",data=LA_dict)
+    return jsonify(nbr_list)
+
+if __name__ == "__main__":
+    app.run(debug = True)    
