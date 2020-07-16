@@ -1,7 +1,7 @@
 // Creating map object
 var myMap = L.map("map", {
   center: [34.0522, -118.2437],
-  zoom: 8
+  zoom: 10
 });
 
 // Adding tile layer
@@ -52,13 +52,26 @@ $.ajax({
 
       d3.json(geoData, function(response) { 
         
-      //console.log(appendPrice)
+      console.log(appendPrice)
             //console.log(response.length);
           geojson = L.choropleth(response, {
               
               
             // Define what  property in the features to use
-            valueProperty: "MHI2016",
+            valueProperty: function(feature, layer) {
+              //var appendText = [];
+            for (var i = 0; i < appendText.length; i++) {
+              //appendText.push(response[i].neighbourhood,response[i].daily_price,response[i].review_scores_rating);
+            //}
+    
+            //$("#sth").append(appendText);
+              if (feature.properties.neighbourhood === appendText[i]){
+            console.log(appendText.length)
+           // layer.bindPopup("Neighborhood: " + feature.properties.neighbourhood + "<br>Price:<br>" +
+              return appendText[i+1];
+                }
+              }
+            } ,
 
             // Set color scale
             scale: ["#ffffb2", "#b10026"],
@@ -74,10 +87,11 @@ $.ajax({
               weight: 1,
               fillOpacity: 0.8
             },
-
+            
             // Binding a pop-up to each layer
             
             onEachFeature: function(feature, layer) {
+
                 //var appendText = [];
               for (var i = 0; i < appendText.length; i++) {
                 //appendText.push(response[i].neighbourhood,response[i].daily_price,response[i].review_scores_rating);
@@ -85,7 +99,8 @@ $.ajax({
       
               //$("#sth").append(appendText);
                 if (feature.properties.neighbourhood === appendText[i]){
-              console.log(appendText.length)
+                  
+              //console.log(appendText.length)
               layer.bindPopup("Neighborhood: " + feature.properties.neighbourhood + "<br>Price:<br>" +
                 "$" + appendText[i+1] + "<br>Review Score:<br>" + appendText[i+2]);
                   }
