@@ -1,5 +1,4 @@
-We have totally 7 datasets for our project. Five are stored in Github here, Two are stored in the cloud(since they are so large). 
-However, they all could be downloaded from the AWS S3.
+We have totally 7 datasets for our project. They all could be downloaded from the AWS S3.
 
 Here are the AWS bucket links to the datasets:
 1. [Amenity](https://data-analytics-airbnb.s3.us-east-2.amazonaws.com/Data/amenity.csv)
