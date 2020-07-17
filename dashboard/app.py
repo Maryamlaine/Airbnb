@@ -62,14 +62,6 @@ def machinelearningvis():
 def index_choropleth():
     return render_template("index_choropleth.html")
 
-@app.route("/index_heatmap")
-def index_heatmap():
-    return render_template("index_heatmap.html")
-
-@app.route("/index_cluster")
-def index_cluster():
-    return render_template("index_cluster.html")
-
 @app.route("/visuals")
 def visuals():
     return render_template("visuals.html")
