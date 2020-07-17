@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="Machine Learning Topic Modelling (+LDA) Page">
+  <meta name="author" content="BootcampAirBnB Team 2020">
+
+  <title>Topic Modelling (+LDA)</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="../static/css/business-casual.min.css" rel="stylesheet">
+  <link href="../static/style.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <a name="top"></a>
+  <a href="/" style="text-decoration: none;"><h1 class="site-heading text-center text-white d-none d-lg-block">
+    <span class="site-heading-upper text-primary mb-3">Los Angeles AirBnB</span>
+    <span class="site-heading-lower">Hedonic Pricing Analysis</span>
+  </h1></a>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
+    <div class="container">
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="/">Home
+              <span class="sr-only">(current)</span>
+            </a>
+          </li>
+          <li class="nav-item px-lg-4">
+            <a class="nav-link text-uppercase text-expanded" href="/about">About Project</a>
+          </li>
+          <li class="nav-item active dropdown px-lg-4">
+            <a class="nav-link dropdown-toggle text-uppercase text-expanded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Machine Learning
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item text-uppercase text-expanded" href="/machinelearning">Machine Learning Models</a>
+              <a class="dropdown-item text-uppercase text-expanded" href="/machinelearningvis">Machine Learning Visualizations</a>
+            </div>
+          </li>
+          <li class="nav-item dropdown px-lg-4">
+            <a class="nav-link dropdown-toggle text-uppercase text-expanded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Visualizations
+            </a>
+            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item text-uppercase text-expanded" href="/index_choropleth">Map Exploration</a>
+              <a class="dropdown-item text-uppercase text-expanded" href="/tableau">Tableau Visuals</a>
+              <a class="dropdown-item text-uppercase text-expanded" href="/visuals">Further Visuals</a>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <br>
+
+  <div class="row">
+    <div class="col-md-2 offset-md-10">
+      <ul class="pagination">
+        <li class="page-item"><a href="/machinelearning" class="page-link">ML 1</a></li>
+        <li class="page-item"><a href="/machinelearning2" class="page-link">ML 2</a></li>
+        <li class="page-item active"><a href="/machinelearning3" class="page-link">ML 3</a></li>
+        <li class="page-item"><a href="/machinelearning4" class="page-link">ML 4</a></li>
+      </ul>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="title-header bg">
+    <h2 class="title-header text-light text-center">LDA Topic Modelling</h2>
+  </div>
+
+  <!--Carousel Wrapper-->
+  <div id="img-slides" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel" data-interval="10000">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#img-slides" data-slide-to="0" class="active"></li>
+      <li data-target="#img-slides" data-slide-to="1"></li>
+      <li data-target="#img-slides" data-slide-to="2"></li>
+      <li data-target="#img-slides" data-slide-to="3"></li>
+      <li data-target="#img-slides" data-slide-to="4"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active text-center">
+        <div class="view">
+          <img class="rounded" src="../static/img/Topic Modelling (LDA)/1-clean.png" alt="First slide">
+          <div class="mask rgba-black-light"></div>
+        </div>
+        <br><br><br><br>
+        <div class="carousel-caption">
+          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">TBD</p>
+        </div>
+      </div>
+      <div class="carousel-item text-center">
+        <!--Mask color-->
+        <div class="view">
+          <img class="rounded" src="../static/img/Topic Modelling (LDA)/2-LDA.png"  alt="Second slide">
+          <div class="mask rgba-black-light"></div>
+        </div>
+        <br><br><br><br>
+        <div class="carousel-caption">
+          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">TBD</p>
+        </div>
+      </div>
+      <div class="carousel-item text-center">
+        <!--Mask color-->
+        <div class="view">
+          <img class="rounded" src="../static/img/Topic Modelling (LDA)/3-wc.png"  alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+        </div>
+        <br><br><br><br>
+        <div class="carousel-caption">
+          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">TBD</p>
+        </div>
+      </div>
+      <div class="carousel-item text-center">
+        <!--Mask color-->
+        <div class="view">
+          <img class="rounded" src="../static/img/Topic Modelling (LDA)/4-top30.png"  alt="Fourth slide">
+          <div class="mask rgba-black-light"></div>
+        </div>
+        <br><br><br><br>
+        <div class="carousel-caption">
+          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">TBD</p>
+        </div>
+      </div>
+      <div class="carousel-item text-center">
+        <!--Mask color-->
+        <div class="view">
+          <img class="rounded" src="../static/img/Topic Modelling (LDA)/5-LDA_fin.png"  alt="Fifth slide">
+          <div class="mask rgba-black-light"></div>
+        </div>
+        <br><br><br><br>
+        <div class="carousel-caption">
+          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">TBD</p>
+        </div>
+      </div>
+    </div>
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#img-slides" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#img-slides" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
+  </div>
+  <!--/.Carousel Wrapper-->
+
+  <br>
+
+  <div class="intro-button mx-auto" style="text-align: center;">
+    <a class="btn btn-primary btn-xl" href="/machinelearningvis">Explore Machine Learning Visuals</a>
+  </div>
+
+  <br>
+
+  <footer class="footer text-faded text-center py-5">
+    <div class="container">
+      <p class="m-0 small">Copyright &copy; <a href="https://github.com/Maryamlaine/Airbnb" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">BootcampAirBnB Team 2020</a></p>
+    </div>
+  </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="../static/vendor/jquery/jquery.min.js"></script>
+  <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+</body>
+
+</html>

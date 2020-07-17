@@ -37,7 +37,7 @@
 </head>
 <body>
 
-  <a href="index.html" style="text-decoration: none;"><h1 class="site-heading text-center text-white d-none d-lg-block">
+  <a href="/" style="text-decoration: none;"><h1 class="site-heading text-center text-white d-none d-lg-block">
     <span class="site-heading-upper text-primary mb-3">Los Angeles AirBnB</span>
     <span class="site-heading-lower">Hedonic Pricing Analysis</span>
   </h1></a>
@@ -52,20 +52,20 @@
       <div class="collapse navbar-collapse" id="navbarResponsive">
         <ul class="navbar-nav mx-auto">
           <li class="nav-item px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="index.html">Home
+            <a class="nav-link text-uppercase text-expanded" href="/">Home
               <span class="sr-only">(current)</span>
             </a>
           </li>
           <li class="nav-item dropdown px-lg-4">
-            <a class="nav-link text-uppercase text-expanded" href="about.html">About Project</a>
+            <a class="nav-link text-uppercase text-expanded" href="/about">About Project</a>
           </li>
           <li class="nav-item dropdown px-lg-4">
             <a class="nav-link dropdown-toggle text-uppercase text-expanded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Machine Learning
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item text-uppercase text-expanded" href="machinelearning.html">Machine Learning Models</a>
-              <a class="dropdown-item text-uppercase text-expanded" href="machinelearningvis.html">Machine Learning Visualizations</a>
+              <a class="dropdown-item text-uppercase text-expanded" href="/machinelearning">Machine Learning Models</a>
+              <a class="dropdown-item text-uppercase text-expanded" href="/machinelearningvis">Machine Learning Visualizations</a>
             </div>
           </li>
           <li class="nav-item active dropdown px-lg-4">
@@ -73,8 +73,9 @@
               Visualizations
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item text-uppercase text-expanded" href="index_choropleth.html">Map Exploration</a>
-              <a class="dropdown-item text-uppercase text-expanded" href="visuals.html">Further Visuals</a>
+              <a class="dropdown-item text-uppercase text-expanded" href="/index_choropleth">Map Exploration</a>
+              <a class="dropdown-item text-uppercase text-expanded" href="/tableau">Tableau Visuals</a>
+              <a class="dropdown-item text-uppercase text-expanded" href="/visuals">Further Visuals</a>
             </div>
           </li>
         </ul>
@@ -82,25 +83,21 @@
     </div>
   </nav>
 
-  <div class="container-fluid">
-    <div class="row">
-      <div class="col-md-2 offset-md-10">
-        <ul class="pagination">
-          <li class="active"><a href="index_choropleth.html">1</a></li>
-          <li><a href="index_cluster.html">2</a></li>
-          <li><a href="index_heatmap.html">3</a></li>
-        </ul>
-      </div>
-    </div>
+  <br><br><br>
+
+  <div class="title-header bg">
+    <h3 class="title-header text-light text-center">NEIGHBORHOOD CHOROPLETH</h3>
   </div>
 
-  <!-- The div where we will inject our map -->
-  <div id="map" class="container-fluid col-md-10"></div>
+    <!-- The div where we will inject our map -->
+    <div id="map" class="container-fluid col-md-10"></div>
+  
+    <br>
 
-  <br>
+  
 
   <div class="bg text-light">
-    <a href="visuals.html"><p style="position: relative;text-align: right;font-size: 18px;padding-right: 2%;">Explore More Visualizations</p></a>
+    <a href="/tableau"><p style="position: relative;text-align: right;font-size: 18px;padding-right: 2%;">Explore More Visualizations</p></a>
   </div>
 
   <footer class="footer text-faded text-center py-5">
@@ -114,7 +111,6 @@
 
   <!-- Our JavaScript -->
   <script type="text/javascript" src="../static/js/config.js"></script>
-  <script type="text/javascript" src="../static/js/logic_choropleth.js"></script>  
 
   <!-- Bootstrap core JavaScript -->
   <script src="../static/vendor/jquery/jquery.min.js"></script>

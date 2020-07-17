@@ -26,7 +26,7 @@
   <body>
 
     <a name="top"></a>
-    <a href="index.html" style="text-decoration: none;"><h1 class="site-heading text-center text-white d-none d-lg-block">
+    <a href="/" style="text-decoration: none;"><h1 class="site-heading text-center text-white d-none d-lg-block">
       <span class="site-heading-upper text-primary mb-3">Los Angeles AirBnB</span>
       <span class="site-heading-lower">Hedonic Pricing Analysis</span>
     </h1></a>
@@ -41,20 +41,20 @@
         <div class="collapse navbar-collapse" id="navbarResponsive">
           <ul class="navbar-nav mx-auto">
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="index.html">Home
+              <a class="nav-link text-uppercase text-expanded" href="/">Home
                 <span class="sr-only">(current)</span>
               </a>
             </li>
             <li class="nav-item px-lg-4">
-              <a class="nav-link text-uppercase text-expanded" href="about.html">About Project</a>
+              <a class="nav-link text-uppercase text-expanded" href="/about">About Project</a>
             </li>
             <li class="nav-item dropdown px-lg-4">
               <a class="nav-link dropdown-toggle text-uppercase text-expanded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 Machine Learning
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item text-uppercase text-expanded" href="machinelearning.html">Machine Learning Models</a>
-                <a class="dropdown-item text-uppercase text-expanded" href="machinelearningvis.html">Machine Learning Visualizations</a>
+                <a class="dropdown-item text-uppercase text-expanded" href="/machinelearning">Machine Learning Models</a>
+                <a class="dropdown-item text-uppercase text-expanded" href="/machinelearningvis">Machine Learning Visualizations</a>
               </div>
             </li>
             <li class="nav-item active dropdown px-lg-4">
@@ -62,8 +62,9 @@
                 Visualizations
               </a>
               <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <a class="dropdown-item text-uppercase text-expanded" href="index_choropleth.html">Map Exploration</a>
-                <a class="dropdown-item text-uppercase text-expanded" href="visuals.html">Further Visuals</a>
+                <a class="dropdown-item text-uppercase text-expanded" href="/index_choropleth">Map Exploration</a>
+                <a class="dropdown-item text-uppercase text-expanded" href="/tableau">Tableau Visuals</a>
+                <a class="dropdown-item text-uppercase text-expanded" href="/visuals">Further Visuals</a>
               </div>
             </li>
           </ul>
@@ -71,69 +72,69 @@
       </div>
     </nav>
 
-    <section class="page-section">
-      <div class="container">
-        <div class="product-item">
-          <div class="product-item-title d-flex">
-            <div class="bg-faded p-5 d-flex ml-auto rounded">
-              <h2 class="section-heading mb-0">
-                <span class="section-heading-lower">First Graph?</span>
-              </h2>
-            </div>
-          </div>
-          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="../static/img/tempimage1.jpg" alt="tempimage1" style="padding-top: 2em; padding-bottom: 2em;">
-          <div class="product-item-description d-flex mr-auto">
-            <div class="bg-faded p-5 rounded">
-              <p class="mb-0">If we have any other visualizations created, i.e., pie chart, bar graphs, etc., we should use this page to host and describe images of those.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  
-    <section class="page-section">
-      <div class="container">
-        <div class="product-item">
-          <div class="product-item-title d-flex">
-            <div class="bg-faded p-5 d-flex mr-auto rounded">
-              <h2 class="section-heading mb-0">
-                <span class="section-heading-lower">Second Graph?</span>
-              </h2>
-            </div>
-          </div>
-          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="../static/img/tempimage2.jpg" alt="tempimage2" style="padding-top: 2em; padding-bottom: 2em;">
-          <div class="product-item-description d-flex ml-auto">
-            <div class="bg-faded p-5 rounded">
-              <p class="mb-0">If we have any other visualizations created, i.e., pie chart, bar graphs, etc., we should use this page to host and describe images of those.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-  
-    <section class="page-section">
-      <div class="container">
-        <div class="product-item">
-          <div class="product-item-title d-flex">
-            <div class="bg-faded p-5 d-flex ml-auto rounded">
-              <h2 class="section-heading mb-0">
-                <span class="section-heading-lower">Third Graph?</span>
-              </h2>
-            </div>
-          </div>
-          <img class="product-item-img mx-auto d-flex rounded img-fluid mb-3 mb-lg-0" src="../static/img/tempimage3.png" alt="tempimage3" style="padding-top: 2em; padding-bottom: 2em;">
-          <div class="product-item-description d-flex mr-auto">
-            <div class="bg-faded p-5 rounded">
-              <p class="mb-0">If we have any other visualizations created, i.e., pie chart, bar graphs, etc., we should use this page to host and describe images of those.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+    <br>
 
-    <a href="#top"><p style="position: relative;text-align: right;font-size: 16px;padding-right: 2%;">Back To Top</p></a>
+  <!--Carousel Wrapper-->
+  <div id="img-slides" class="carousel slide carousel-fade z-depth-1-half" data-ride="carousel" data-interval="10000">
+    <!--Indicators-->
+    <ol class="carousel-indicators">
+      <li data-target="#img-slides" data-slide-to="0" class="active"></li>
+      <li data-target="#img-slides" data-slide-to="1"></li>
+      <li data-target="#img-slides" data-slide-to="2"></li>
+    </ol>
+    <!--/.Indicators-->
+    <!--Slides-->
+    <div class="carousel-inner" role="listbox">
+      <div class="carousel-item active text-center">
+        <div class="view">
+          <img class="rounded bg-white" src="../static/img/TBD.png" alt="First slide">
+          <div class="mask rgba-black-light"></div>
+        </div>
+        <br><br><br><br>
+        <div class="carousel-caption">
+          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">Area for any extra graphics made.</p>
+        </div>
+      </div>
+      <div class="carousel-item text-center">
+        <!--Mask color-->
+        <div class="view">
+          <img class="rounded bg-white" src="../static/img/TBD.png" alt="Second slide">
+          <div class="mask rgba-black-light"></div>
+        </div>
+        <br><br><br><br>
+        <div class="carousel-caption">
+          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">Area for any extra graphics made.</p>
+        </div>
+      </div>
+      <div class="carousel-item text-center">
+        <!--Mask color-->
+        <div class="view">
+          <img class="rounded bg-white" src="../static/img/TBD.png" alt="Third slide">
+          <div class="mask rgba-black-light"></div>
+        </div>
+        <br><br><br><br>
+        <div class="carousel-caption">
+          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">Area for any extra graphics made.</p>
+        </div>
+      </div>
+    </div>
+    <!--/.Slides-->
+    <!--Controls-->
+    <a class="carousel-control-prev" href="#img-slides" role="button" data-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#img-slides" role="button" data-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="sr-only">Next</span>
+    </a>
+    <!--/.Controls-->
+  </div>
+  <!--/.Carousel Wrapper-->
 
-    <footer class="footer text-faded text-center py-5">
+  <br>
+
+  <footer class="footer text-faded text-center py-5">
       <div class="container">
         <p class="m-0 small">Copyright &copy; <a href="https://github.com/Maryamlaine/Airbnb" target="_blank" rel="noopener noreferrer" style="text-decoration: none;">BootcampAirBnB Team 2020</a></p>
       </div>
