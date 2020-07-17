@@ -41,31 +41,58 @@ neighborhood_table = Base.classes.neighborhood
 amenity_table = Base.classes.amenity
 availability_table = Base.classes.availability
 
+# Index/Landing Page
 @app.route("/")
 def index():
     """Return the homepage."""
     return render_template("index.html")
 
+# About/Project Information Page
 @app.route("/about")
 def about():
     return render_template("about.html")
 
+# Naive_Bayes
 @app.route("/machinelearning")
 def machinelearning():
     return render_template("machinelearning.html")
 
+# NLP (word clouds/NLTK)
+@app.route("/machinelearning2")
+def machinelearning2():
+    return render_template("machinelearning2.html")
+
+# Topic Modelling (+LDA)
+@app.route("/machinelearning3")
+def machinelearning3():
+    return render_template("machinelearning3.html")
+
+# XGBoost4
+@app.route("/machinelearning4")
+def machinelearning4():
+    return render_template("machinelearning4.html")
+
+# Machine Learning generated visualizations
 @app.route("/machinelearningvis")
 def machinelearningvis():
     return render_template("machinelearningvis.html")
 
+# Leaflet Choropleth map
 @app.route("/index_choropleth")
 def index_choropleth():
     return render_template("index_choropleth.html")
 
+# Tableau Dashboard
+@app.route("/tableau")
+def tableau():
+    return render_template("tableau.html")
+
+# Other manually created visuals
 @app.route("/visuals")
 def visuals():
     return render_template("visuals.html")
 
+# Route for heatmap
 @app.route("/neighborhood")
 def neighborhoods():
     
