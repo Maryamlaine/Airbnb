@@ -60,8 +60,6 @@ Our web application utilizes:
 
 # Machine Learning Models
 
-Topic  Model?
-Price Model?
 
 ##Naive Bayse
 
@@ -103,13 +101,12 @@ Naive bayes is a predictive modeling problem that involves assigning a given inp
    * Used `MulticlassClassificationEvaluator` to evaluate the model on the testing set, Accuracy of model at predicting reviews was: 0.997703.
 
 
+##XGBoost
 
+A model known for getting high levels of accuracy in machine learning models without doing much tuning, and agile performance.
+Boosting works in such a way that many different decision trees are built. Each of these individual trees work to provide some vital piece of information for prediction, despite not being strong individually. The whole is worth more than the sum of its parts, so to speak. 
 
-
-
-
-
-XGBoost?
+This is the fundamental concept of the boosting technique: Leveraging many different weak learners for their most useful parts, and “boosting” them for optimal performance. Each tree learns and updates residual errors, then “grows the next tree” based on this updated residual error. The final, now strong, learner decreases the bias and variance of the model. The result is many small trees that are not very deep. A few of the validation techniques of the model are k-fold cross validation and Mean Standard Error. With such large numbers of trees, there is risk of overfitting.  There must be carefully chosen stop criteria for the boosting process.
 ​
 # Visualizations
 
