@@ -63,7 +63,7 @@ Our web application utilizes:
 Topic  Model?
 Price Model?
 
-##Naive Baise
+##Naive Bayse
 
 Naive bayes is a predictive modeling problem that involves assigning a given input data to a sample. In this project, we are trying to calculate the conditional probablity of a class label for review_scores_rating given the airbnb data sample for LA. In other words, we used Naive Bayes to classify review scores based on comments provided by guests.
 
@@ -113,6 +113,12 @@ XGBoost?
 ​
 # Visualizations
 
+* Tableau Dashboard Links:
+
+1. [Dashboard](https://public.tableau.com/views/AirbnbDashboard_15948743321440/AirbnbDashboard?:language=en-GB&:display_count=y&publish=yes&:origin=viz_share_link)
+
+
+2. [Airbnb_LA](https://public.tableau.com/views/Airbnb_LA/Dashboard1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link)
 
 
 
