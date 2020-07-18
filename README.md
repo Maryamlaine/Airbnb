@@ -63,12 +63,15 @@ Our web application utilizes:
 Latent Dirichlet Allocation (LDA) is an example of topic model where each document is considered as a collection of topics and each word in the document corresponds to one of the topics. 
 
    * Cleaned and normalized our dataset to prepare for modeling.
+
    ![1-clean](dashboard/static/img/NLP-LDA/1-clean.png)
 
    * Ran LDA model against our review data to determine positive and negative comments.
+
    ![2-LDA](dashboard/static/img/NLP-LDA/2-LDA.png)
 
    * Ran Vectorizer against our return and created visual(found in our ML visuals tab) to represent the top 30 most frequent words found in negative comments. We repeated this process multiple times to create our NLP visuals.
+
    ![3-top30](dashboard/static/img/NLP-LDA/3-top30.png)
 
 
@@ -80,12 +83,15 @@ Boosting works in such a way that many different decision trees are built. Each 
 This is the fundamental concept of the boosting technique: Leveraging many different weak learners for their most useful parts, and “boosting” them for optimal performance. Each tree learns and updates residual errors, then “grows the next tree” based on this updated residual error. The final, now strong, learner decreases the bias and variance of the model. The result is many small trees that are not very deep. A few of the validation techniques of the model are k-fold cross validation and Mean Standard Error. With such large numbers of trees, there is risk of overfitting.  There must be carefully chosen stop criteria for the boosting process.
 
    * Merged our dataset to prepare for future models.
+
    ![2-dataprep](dashboard/static/img/XGBoost4/2-dataprep.png)
 
    * Normalized and cleaned our dataset to further prepare for modeling.
+
    ![3-dataclean](dashboard/static/img/XGBoost4/3-dataclean.png)
 
    * Created the training and testing sets for our model.
+
    ![4-trainmod](dashboard/static/img/XGBoost4/4-trainmod.png)
 
    ### Regession Models for price prediction
@@ -96,15 +102,19 @@ This is the fundamental concept of the boosting technique: Leveraging many diffe
    * Decision Tree
 
       * Ran a Linear Regression Model against our data for predictions and determined the R2 value to be 0.622.
+
       ![5-linereg](dashboard/static/img/XGBoost4/5-linereg.png)
 
       * Ran a XGBRegressor Model against our data for predictions and determined the R2 value to be 0.712. This was our most accurate model.
+
       ![6-xgbreg](dashboard/static/img/XGBoost4/6-xgbreg.png)
 
       * Ran a Lasso Model against our data for predictions and determined the R2 value to be 0.622.
+
       ![7-lassoreg](dashboard/static/img/XGBoost4/7-lassoreg.png)
 
       * Ran a Decision Tree Regression Model against our data for predictions and determined the R2 value to be 0.349.
+
       ![8-dectreereg](dashboard/static/img/XGBoost4/8-dectreereg.png)
 
 ## K-Means Clustering
@@ -112,15 +122,19 @@ This is the fundamental concept of the boosting technique: Leveraging many diffe
 Utilized an unsupervised model of K-Means Clustering to generate clusters. By finding the K-Means score of our dataset, we're able to determine the minimized sum of all distances between cluster centers. We returned a K-Means score of -4.308237925188447 which indicates a large spread in our data values. This value is a correct representation of our data, as we examine a large amount of LA neighborhoods with a wide range of distance between them.
 
    * Prepared dataset and created PCA (principal component analysis) dataframe.
+
    ![2-pca](dashboard/static/img/K-Means_Cluster/2-pca.png)
    
    * Imported and fitted model, calculated SSE (sum of squared error), and plotted graphic utilizing The Elbow Method to visualize SSE per k value.
+
    ![3-elbow](dashboard/static/img/K-Means_Cluster/3-elbow.png)
 
    * Assigned cluster variables and used K-Means to predict the cluster values.
+
    ![4-clusters](dashboard/static/img/K-Means_Cluster/4-clusters.png)
 
    * Determined our K-Means score.
+
    ![5-kmscore](dashboard/static/img/K-Means_Cluster/5-kmscore.png)
 
 
@@ -131,6 +145,7 @@ Naive bayes is a predictive modeling problem that involves assigning a given inp
 ### Classifying Comments for Naive_Bayes Modeling of Airbnb
 
 1. Read in the file from AWS and fix the data sctructure in pyspark using structtype.
+
 ![1-structfield](dashboard/static/img/Naive_Bayes/1-structfield.png)
 
 2. Created a column that adds the length of the review as a feature.
@@ -138,10 +153,12 @@ Naive bayes is a predictive modeling problem that involves assigning a given inp
 3. Created a list of transformations to be applied in the pipeline:
 
    * Created label column that will be used later for predicting by transforming review_scores_rating into 4 bins with rating 0 to 40 as 1, 41 to 70 as 2 and 70 to 100 as 3, using bucketizer. Now we have a label column with 1, 2 and 3.
+
    ![2-binning](dashboard/static/img/Naive_Bayes/2-binning.png)
 
    * We used langdetect to only pick the enlish comments for the analysis to be used for stop words dictionary later.	
       ** We utilized a user defined function (udf) to transform langdetect function.
+
       ![3-lang](dashboard/static/img/Naive_Bayes/[3-lang.png)
 
    * Tokenize the review.
@@ -157,6 +174,7 @@ Naive bayes is a predictive modeling problem that involves assigning a given inp
 4. Create a feature vector containing the output from the IDFModel and the length.
 
    * Fit it to the data.
+
    ![4-modelfit](dashboard/static/img/Naive_Bayes/4-modelfit.png)
 
    * Create training and testing data of 0.8 , and 0.2.
@@ -166,6 +184,7 @@ Naive bayes is a predictive modeling problem that involves assigning a given inp
    * Predict outcomes using the testing set.
 
    * Used `MulticlassClassificationEvaluator` to evaluate the model on the testing set, Accuracy of model at predicting reviews was: 0.997703.
+
    ![5-acc](dashboard/static/img/Naive_Bayes/5-acc.png)
 
 # Visualizations
@@ -180,8 +199,8 @@ Naive bayes is a predictive modeling problem that involves assigning a given inp
 * Images Created Through Machine Learning
    ![pos_wc](dashboard/static/img/MLvis/pos_wc.png)
    ![neg_wc](dashboard/static/img/MLvis/neg_wc.png)
-   ![top30_pos](dashboard/static/img/MLvis/top30_pos.png)
-   ![top30_neg](dashboard/static/img/MLvis/top30_neg.png)
+![top30_pos](dashboard/static/img/MLvis/top30_pos.png)
+![top30_neg](dashboard/static/img/MLvis/top30_neg.png)
    ![linreg](dashboard/static/img/MLvis/linreg.png)
    ![xgbreg](dashboard/static/img/MLvis/xgbreg.png)
    ![lassoreg](dashboard/static/img/MLvis/lassoreg.png)
