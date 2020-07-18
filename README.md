@@ -159,7 +159,7 @@ Naive bayes is a predictive modeling problem that involves assigning a given inp
    * We used langdetect to only pick the enlish comments for the analysis to be used for stop words dictionary later.	
       ** We utilized a user defined function (udf) to transform langdetect function.
 
-      ![3-lang](dashboard/static/img/Naive_Bayes/[3-lang.png)
+      ![3-lang](dashboard/static/img/Naive_Bayes/3-lang.png)
 
    * Tokenize the review.
 
