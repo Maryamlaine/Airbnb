@@ -58,6 +58,7 @@ Our web application utilizes:
 
 
 # Machine Learning Models
+##Latent Dirichlet Allocation(LDA)
 
 ## NLP-LDA Topic Modeling
 
@@ -121,7 +122,6 @@ Utilized an unsupervised model of K-Means Clustering to generate clusters. By fi
 
    * Determined our K-Means score.
 
-
 ##XGBoost
 
 A model known for getting high levels of accuracy in machine learning models without doing much tuning, and agile performance.
@@ -151,7 +151,6 @@ This is the fundamental concept of the boosting technique: Leveraging many diffe
 
 
 2. [Airbnb_LA](https://public.tableau.com/views/Airbnb_LA/Dashboard1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link)
-
 
 
 # Conclusions
