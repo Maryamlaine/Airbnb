@@ -59,7 +59,28 @@ Our web application utilizes:
 * Heroku cloud platform for app deployment <p>
 
 # Machine Learning Models
+##Latent Dirichlet Allocation(LDA)
 
+LDA is an example of topic modeling that used to classify text in a document. We used it to find patterns in comments column of Airbnb dataset for LA.
+
+1. Preprocessing
+
+ * Tokenization is used to split the text into sentence and sentence into words, also turning the words into lower case, and remove punctuations.
+ * Stopwords were removed
+ * Lemmatization , thrird person changed to first person. Verbs in past and present tenses turned into present tense.
+ * Words were stemmed to its roots.
+
+2. Loading gensim and nltk 
+
+3. Wrrote a function to perform lemmatization and stem preprocessing.
+
+4. Select a document to preview
+
+5. Turning the bag of words into dictionary and find the frequency that a certain words were appeared in training set.
+
+6. TD_IDF
+
+7. Running LDA using bag of words for each topic and explore words occuring in that topic and it's relative weight.
 
 ##Naive Bayse
 
@@ -100,7 +121,6 @@ Naive bayes is a predictive modeling problem that involves assigning a given inp
 
    * Used `MulticlassClassificationEvaluator` to evaluate the model on the testing set, Accuracy of model at predicting reviews was: 0.997703.
 
-
 ##XGBoost
 
 A model known for getting high levels of accuracy in machine learning models without doing much tuning, and agile performance.
@@ -116,7 +136,6 @@ This is the fundamental concept of the boosting technique: Leveraging many diffe
 
 
 2. [Airbnb_LA](https://public.tableau.com/views/Airbnb_LA/Dashboard1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link)
-
 
 
 # Conclusions
