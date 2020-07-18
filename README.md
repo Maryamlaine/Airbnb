@@ -52,13 +52,22 @@ Variable Examples include:
 Our web application utilizes:
 * A postgreSQL database in AWS
 * Python for ETL 
-*
-*
 * FLASK API to render data from the database to the front-end application
 * HTML/JS/CSS using GeoJSON, Choropleth Leaflet, Bootstrap, and Tableau for the webpage and visualizations
 * Heroku cloud platform for app deployment <p>
 
+
 # Machine Learning Models
+
+## NLP-LDA Topic Modeling
+
+Latent Dirichlet Allocation (LDA) is an example of topic model where each document is considered as a collection of topics and each word in the document corresponds to one of the topics. 
+
+   * Cleaned and normalized our dataset to prepare for modeling.
+
+   * Ran LDA model against our review data to determine positive and negative comments.
+
+   * Ran Vectorizer against our return and created visual(found in our ML visuals tab) to represent the top 30 most frequent words found in negative comments. We repeated this process multiple times to create our NLP visuals.
 
 
 ##Naive Bayse
@@ -100,6 +109,18 @@ Naive bayes is a predictive modeling problem that involves assigning a given inp
 
    * Used `MulticlassClassificationEvaluator` to evaluate the model on the testing set, Accuracy of model at predicting reviews was: 0.997703.
 
+## K-Means Clustering
+
+Utilized an unsupervised model of K-Means Clustering to generate clusters. By finding the K-Means score of our dataset, we're able to determine the minimized sum of all distances between cluster centers. We returned a K-Means score of -4.308237925188447e+18 which indicates a large spread in our data values. This value is a correct representation of our data, as we examine a large amount of LA neighborhoods with a wide range of distance between them.
+
+   * Prepared dataset and created PCA (principal component analysis) dataframe.
+   
+   * Imported and fitted model, calculated SSE (sum of squared error), and plotted graphic utilizing The Elbow Method to visualize SSE per k value.
+
+   * Assigned cluster variables and used K-Means to predict the cluster values.
+
+   * Determined our K-Means score.
+
 
 ##XGBoost
 
@@ -107,6 +128,20 @@ A model known for getting high levels of accuracy in machine learning models wit
 Boosting works in such a way that many different decision trees are built. Each of these individual trees work to provide some vital piece of information for prediction, despite not being strong individually. The whole is worth more than the sum of its parts, so to speak. 
 
 This is the fundamental concept of the boosting technique: Leveraging many different weak learners for their most useful parts, and “boosting” them for optimal performance. Each tree learns and updates residual errors, then “grows the next tree” based on this updated residual error. The final, now strong, learner decreases the bias and variance of the model. The result is many small trees that are not very deep. A few of the validation techniques of the model are k-fold cross validation and Mean Standard Error. With such large numbers of trees, there is risk of overfitting.  There must be carefully chosen stop criteria for the boosting process.
+
+* Merged our dataset to prepare for future models.
+
+   * Normalized and cleaned our dataset to further prepare for modeling.
+
+   * Created the training and testing sets for our model.
+
+   * Ran a Linear Regression Model against our data for predictions and determined the R2 value to be 0.622.
+
+   * Ran a XGBRegressor Model against our data for predictions and determined the R2 value to be 0.712.
+
+   * Ran a Lasso Model against our data for predictions and determined the R2 value to be 0.622.
+
+   * Ran a Decision Tree Regression Model against our data for predictions and determined the R2 value to be 0.349.
 ​
 # Visualizations
 
