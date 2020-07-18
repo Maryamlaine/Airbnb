@@ -34,7 +34,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">
-      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">LA AirBnB Analysis</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -49,19 +49,14 @@
             <a class="nav-link text-uppercase text-expanded" href="/about">About Project</a>
           </li>
           <li class="nav-item active dropdown px-lg-4">
-            <a class="nav-link dropdown-toggle text-uppercase text-expanded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Machine Learning
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item text-uppercase text-expanded" href="/machinelearning">Machine Learning Models</a>
-              <a class="dropdown-item text-uppercase text-expanded" href="/machinelearningvis">Machine Learning Visualizations</a>
-            </div>
+            <a class="nav-link text-uppercase text-expanded" href="/machinelearning">Machine Learning</a>
           </li>
           <li class="nav-item dropdown px-lg-4">
             <a class="nav-link dropdown-toggle text-uppercase text-expanded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Visualizations
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item text-uppercase text-expanded" href="/machinelearningvis">Machine Learning Visualizations</a>
               <a class="dropdown-item text-uppercase text-expanded" href="/visuals">Data Exploration</a>
               <a class="dropdown-item text-uppercase text-expanded" href="/tableau">Tableau Visuals</a>
               <a class="dropdown-item text-uppercase text-expanded" href="/index_choropleth">Map Exploration</a>
@@ -83,9 +78,9 @@
               <h2 class="section-heading mb-4">
                 <span class="section-heading-lower">Machine Learning</span>
               </h2>
-              <p class="mb-3">On the slides and pages below, you'll find snippets and explanations of our code as we went through the Machine Learning processes. The four ML tabs will contain examples of our applications of each of the aforementioned Machine Learning Models.</p>
-              <p class="mb-3">Visit the <a href="/machinelearningvis">Machine Learning Visualizations</a> tab to view graphics created from our Models' results, and check the pages found under <a href="/visuals">Visualizations</a> for further data exploration.</p>
-              <p class="mb-3">For further process documentation, visit our GitHub Project Repository <a href="https://github.com/Maryamlaine/Airbnb" target="_blank" rel="noopener noreferrer">here.</a></p>
+              <p class="mb-3">On the slides and pages below, you'll find snippets and brief explanations of our code as we went through our Machine Learning processes. The four ML tabs will contain examples of our applications of each of the aforementioned Machine Learning Models.</p>
+              <p class="mb-3">Visit the <a href="/machinelearningvis">Machine Learning Visualizations</a> tab to view graphics created from our Models' results, and explore our other <a href="/visuals">Visualizations</a> pages for further data exploration.</p>
+              <p class="mb-3">For detailed process documentation, visit our GitHub Project Repository <a href="https://github.com/Maryamlaine/Airbnb" target="_blank" rel="noopener noreferrer">here.</a></p>
             </div>
           </div>
         </div>
@@ -107,7 +102,7 @@
   <br>
 
   <div class="title-header bg">
-    <h2 class="title-header text-light text-center">LDA Topic Modelling</h2>
+    <h2 class="title-header text-light text-center">LDA Topic Modeling</h2>
   </div>
 
   <!--Carousel Wrapper-->
@@ -117,8 +112,6 @@
       <li data-target="#img-slides" data-slide-to="0" class="active"></li>
       <li data-target="#img-slides" data-slide-to="1"></li>
       <li data-target="#img-slides" data-slide-to="2"></li>
-      <li data-target="#img-slides" data-slide-to="3"></li>
-      <li data-target="#img-slides" data-slide-to="4"></li>
     </ol>
     <!--/.Indicators-->
     <!--Slides-->
@@ -130,7 +123,7 @@
         </div>
         <br><br><br><br>
         <div class="carousel-caption">
-          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">TBD</p>
+          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">Importing code dependencies and cleaning + normalizing dataset.</p>
         </div>
       </div>
       <div class="carousel-item text-center">
@@ -141,40 +134,18 @@
         </div>
         <br><br><br><br>
         <div class="carousel-caption">
-          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">TBD</p>
+          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">Running LDA model against our review data to determine positive ceomments.</p>
         </div>
       </div>
       <div class="carousel-item text-center">
         <!--Mask color-->
         <div class="view">
-          <img class="rounded" src="../static/img/Topic Modelling (LDA)/3-wc.png"  alt="Third slide">
+          <img class="rounded" src="../static/img/Topic Modelling (LDA)/3-top30.png"  alt="Third slide">
           <div class="mask rgba-black-light"></div>
         </div>
-        <br><br><br><br>
+        <br><br><br><br><br>
         <div class="carousel-caption">
-          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">TBD</p>
-        </div>
-      </div>
-      <div class="carousel-item text-center">
-        <!--Mask color-->
-        <div class="view">
-          <img class="rounded" src="../static/img/Topic Modelling (LDA)/4-top30.png"  alt="Fourth slide">
-          <div class="mask rgba-black-light"></div>
-        </div>
-        <br><br><br><br>
-        <div class="carousel-caption">
-          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">TBD</p>
-        </div>
-      </div>
-      <div class="carousel-item text-center">
-        <!--Mask color-->
-        <div class="view">
-          <img class="rounded" src="../static/img/Topic Modelling (LDA)/5-LDA_fin.png"  alt="Fifth slide">
-          <div class="mask rgba-black-light"></div>
-        </div>
-        <br><br><br><br>
-        <div class="carousel-caption">
-          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">TBD</p>
+          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">Running Vectorizer against our return and creating visual(found in our ML visuals tab) to represent the top 30 most frequent words found in negative comments. We repeat this process multiple times to create our visuals.</p>
         </div>
       </div>
     </div>
