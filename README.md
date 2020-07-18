@@ -21,7 +21,7 @@ Questions we aimed to explore:
   
 # Data Exploration
 Original source: [Kaggle](https://www.kaggle.com/oindrilasen/la-airbnb-listings)​<p> 
-Current Sources: [Inside Airbnb](http://insideairbnb.com/get-the-data.html)​<p>
+Current Sources: [Inside Airbnb](http://insideairbnb.com/get-the-data.html), 
                  [Review Table](https://data-analytics-airbnb.s3.us-east-2.amazonaws.com/Data/reviews.csv)
 
 Throughout our data exploration, we discovered a variety of variables to examine and determine whether relationships between anya re present. 
@@ -41,16 +41,30 @@ Our web application utilizes:
 *
 *
 * FLASK API to render data from the database to the front-end application
-* HTML/JS/CSS using GeoJSON, Leaflet.js, Bootstrap, and Tableau for the webpage and visualizations
+* HTML/JS/CSS using GeoJSON, Choropleth Leaflet, Bootstrap, and Tableau for the webpage and visualizations
 * Heroku cloud platform for app deployment <p>
 
-# Machine Learning
+# Machine Learning Models
 
+Topic  Model?
+Price Model?
+Naive Biase?
+XGBoost?
 ​
 # Visualizations
 
 
 
+
+# Conclusions
+
+Based on predictions from our models and visualizations:​<p>
+
+1. The most expensive neighborhoods to rent in are Bel-Air and Harbor City at $1300/night, and the least expensive is Huntington Park at $19/night.​<p>
+
+2. Desirable neighborhoods have higher average prices, and the longer a person has been registered as a host, the higher the rental price. ​ <p>
+
+3. Amenities tend to influence overall price. Indoor fireplaces have the largest pricing influence followed by hot tubs. 
 
 
 # Webpage  
