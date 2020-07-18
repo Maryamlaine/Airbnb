@@ -58,9 +58,8 @@ Our web application utilizes:
 
 
 # Machine Learning Models
-##Latent Dirichlet Allocation(LDA)
 
-## NLP-LDA Topic Modeling
+## NLP-Latent Dirichlet Allocation(LDA)
 
 Latent Dirichlet Allocation (LDA) is an example of topic model where each document is considered as a collection of topics and each word in the document corresponds to one of the topics. 
 
