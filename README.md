@@ -71,7 +71,7 @@ Latent Dirichlet Allocation (LDA) is an example of topic model where each docume
    * Ran Vectorizer against our return and created visual(found in our ML visuals tab) to represent the top 30 most frequent words found in negative comments. We repeated this process multiple times to create our NLP visuals.
 
 
-##Naive Bayse
+## Naive Bayse
 
 Naive bayes is a predictive modeling problem that involves assigning a given input data to a sample. In this project, we are trying to calculate the conditional probablity of a class label for review_scores_rating given the airbnb data sample for LA. In other words, we used Naive Bayes to classify review scores based on comments provided by guests.
 
@@ -122,7 +122,7 @@ Utilized an unsupervised model of K-Means Clustering to generate clusters. By fi
 
    * Determined our K-Means score.
 
-##XGBoost
+## XGBoost
 
 A model known for getting high levels of accuracy in machine learning models without doing much tuning, and agile performance.
 Boosting works in such a way that many different decision trees are built. Each of these individual trees work to provide some vital piece of information for prediction, despite not being strong individually. The whole is worth more than the sum of its parts, so to speak. 
