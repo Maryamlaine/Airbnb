@@ -18,6 +18,20 @@ Questions we aimed to explore:
 * Which neighborhood is the least/most expensive in LA?​
 * How is price impacted by reviews (NLP), room types, host, and neighborhood? ​
 * How do offered amenities influence price?​
+
+# Dataset
+
+We have totally 7 datasets for our project. They all could be downloaded from the AWS S3.
+
+Here are the AWS bucket links to the datasets:
+
+1. [Amenity](https://data-analytics-airbnb.s3.us-east-2.amazonaws.com/Data/amenity.csv)
+2. [Availability](https://data-analytics-airbnb.s3.us-east-2.amazonaws.com/Data/availability.csv)
+3. [Host](https://data-analytics-airbnb.s3.us-east-2.amazonaws.com/Data/host.csv)
+4. [Neighborhood](https://data-analytics-airbnb.s3.us-east-2.amazonaws.com/Data/neighborhood.csv)
+5. [Price](https://data-analytics-airbnb.s3.us-east-2.amazonaws.com/Data/price.csv)
+6. [Property](https://data-analytics-airbnb.s3.us-east-2.amazonaws.com/Data/property.csv)
+8. [Review](https://data-analytics-airbnb.s3.us-east-2.amazonaws.com/Data/review.csv)
   
 # Data Exploration
 Original source: [Kaggle](https://www.kaggle.com/oindrilasen/la-airbnb-listings)​<p> 
@@ -48,7 +62,53 @@ Our web application utilizes:
 
 Topic  Model?
 Price Model?
-Naive Biase?
+
+##Naive Baise
+
+Naive bayes is a predictive modeling problem that involves assigning a given input data to a sample. In this project, we are trying to calculate the conditional probablity of a class label for review_scores_rating given the airbnb data sample for LA. In other words, we used Naive Bayes to classify review scores based on comments provided by guests.
+
+### Classifying Comments for Naive_Bayes Modeling of Airbnb
+
+1. Read in the file from AWS and fix the data sctructure in pyspark using structtype.
+
+2. Created a column that adds the length of the review as a feature.
+
+3. Created a list of transformations to be applied in the pipeline:
+
+   * Created label column that will be used later for predicting by transforming review_scores_rating into 4 bins with rating 0 to 40 as 1, 41 to 70 as 2 and 70 to 100 as 3, using bucketizer. Now we have a label column with 1, 2 and 3.
+
+   * We used langdetect to only pick the enlish comments for the analysis to be used for stop words dictionary later.	
+      ** We utilized a user defined function (udf) to trasform langdetect function.
+
+   * Tokenize the review.
+
+   * Removed the punctuation and exclmation from the comments.
+
+   * Filter out stop words.
+
+   * Calculate term frequency using `HashingTF`.
+
+   * Calculate TF–IDF.
+
+4. Create a feature vector containing the output from the IDFModel and the length.
+
+   * Fit it to the data.
+
+   * Create training and testing data of 0.8 , and 0.2.
+
+   * Create and fit the Naive Bayes model to the training data.
+
+   * Predict outcomes using the testing set.
+
+   * Used `MulticlassClassificationEvaluator` to evaluate the model on the testing set, Accuracy of model at predicting reviews was: 0.997703.
+
+
+
+
+
+
+
+
 XGBoost?
 ​
 # Visualizations
