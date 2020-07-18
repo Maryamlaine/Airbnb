@@ -103,13 +103,14 @@ Naive bayes is a predictive modeling problem that involves assigning a given inp
    * Used `MulticlassClassificationEvaluator` to evaluate the model on the testing set, Accuracy of model at predicting reviews was: 0.997703.
 
 
+### Regession Models for price prediction
+
+* Linear Regression
+* XGBoost
+* Lasso Regression
+* Decision Tree
 
 
-
-
-
-
-XGBoost?
 ​
 # Visualizations
 
