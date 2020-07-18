@@ -20,8 +20,8 @@ Questions we aimed to explore:
 * How do offered amenities influence price?​
   
 # Data Exploration
-Original source: [Kaggle](https://www.kaggle.com/oindrilasen/la-airbnb-listings)​ 
-Current Sources: [Inside Airbnb](http://insideairbnb.com/get-the-data.html)​
+Original source: [Kaggle](https://www.kaggle.com/oindrilasen/la-airbnb-listings)​<p> 
+Current Sources: [Inside Airbnb](http://insideairbnb.com/get-the-data.html)​<p>
                  [Review Table](https://data-analytics-airbnb.s3.us-east-2.amazonaws.com/Data/reviews.csv)
 
 Throughout our data exploration, we discovered a variety of variables to examine and determine whether relationships between anya re present. 
