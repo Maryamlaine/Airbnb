@@ -33,7 +33,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">
-      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">LA AirBnB Analysis</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -48,19 +48,14 @@
             <a class="nav-link text-uppercase text-expanded" href="/about">About Project</a>
           </li>
           <li class="nav-item active dropdown px-lg-4">
-            <a class="nav-link dropdown-toggle text-uppercase text-expanded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Machine Learning
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item text-uppercase text-expanded" href="/machinelearning">Machine Learning Models</a>
-              <a class="dropdown-item text-uppercase text-expanded" href="/machinelearningvis">Machine Learning Visualizations</a>
-            </div>
+            <a class="nav-link text-uppercase text-expanded" href="/machinelearning">Machine Learning</a>
           </li>
           <li class="nav-item dropdown px-lg-4">
             <a class="nav-link dropdown-toggle text-uppercase text-expanded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Visualizations
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item text-uppercase text-expanded" href="/machinelearningvis">Machine Learning Visualizations</a>
               <a class="dropdown-item text-uppercase text-expanded" href="/visuals">Data Exploration</a>
               <a class="dropdown-item text-uppercase text-expanded" href="/tableau">Tableau Visuals</a>
               <a class="dropdown-item text-uppercase text-expanded" href="/index_choropleth">Map Exploration</a>
@@ -82,9 +77,9 @@
               <h2 class="section-heading mb-4">
                 <span class="section-heading-lower">Machine Learning</span>
               </h2>
-              <p class="mb-3">On the slides and pages below, you'll find snippets and explanations of our code as we went through the Machine Learning processes. The four ML tabs will contain examples of our applications of each of the aforementioned Machine Learning Models.</p>
-              <p class="mb-3">Visit the <a href="/machinelearningvis">Machine Learning Visualizations</a> tab to view graphics created from our Models' results, and check the pages found under <a href="/visuals">Visualizations</a> for further data exploration.</p>
-              <p class="mb-3">For further process documentation, visit our GitHub Project Repository <a href="https://github.com/Maryamlaine/Airbnb" target="_blank" rel="noopener noreferrer">here.</a></p>
+              <p class="mb-3">On the slides and pages below, you'll find snippets and brief explanations of our code as we went through our Machine Learning processes. The four ML tabs will contain examples of our applications of each of the aforementioned Machine Learning Models.</p>
+              <p class="mb-3">Visit the <a href="/machinelearningvis">Machine Learning Visualizations</a> tab to view graphics created from our Models' results, and explore our other <a href="/visuals">Visualizations</a> pages for further data exploration.</p>
+              <p class="mb-3">For detailed process documentation, visit our GitHub Project Repository <a href="https://github.com/Maryamlaine/Airbnb" target="_blank" rel="noopener noreferrer">here.</a></p>
             </div>
           </div>
         </div>
@@ -105,7 +100,7 @@
 
   <br>
   <div class="title-header bg">
-    <h2 class="title-header text-light text-center">NLP Model (Using NLTK)((Or will kmeans go here?))</h2>
+    <h2 class="title-header text-light text-center">K-Means Cluster Model</h2>
   </div>
 
   <!--Carousel Wrapper-->
@@ -122,57 +117,58 @@
     <!--Slides-->
     <div class="carousel-inner" role="listbox">
       <div class="carousel-item active text-center">
+        <!--Mask color-->
         <div class="view">
-          <img class="rounded" src="../static/img/NLP (Word Cloud+NLTK)/TBD.png" alt="First slide">
+          <img class="rounded" src="../static/img/K-Means Cluster/1-packages.png" alt="First slide">
           <div class="mask rgba-black-light"></div>
         </div>
         <br><br><br><br>
         <div class="carousel-caption">
-          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">TBD</p>
+          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">Importing code dependencies.</p>
         </div>
       </div>
       <div class="carousel-item text-center">
         <!--Mask color-->
         <div class="view">
-          <img class="rounded" src="../static/img/NLP (Word Cloud+NLTK)/TBD.png"  alt="Second slide">
+          <img class="rounded" src="../static/img/K-Means Cluster/2-pca.png" alt="Second slide">
           <div class="mask rgba-black-light"></div>
         </div>
         <br><br><br><br>
         <div class="carousel-caption">
-          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">TBD</p>
+          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">Preparing dataset and creating PCA (principal component analysis) dataframe.</p>
         </div>
       </div>
       <div class="carousel-item text-center">
         <!--Mask color-->
         <div class="view">
-          <img class="rounded" src="../static/img/NLP (Word Cloud+NLTK)/TBD.png"  alt="Third slide">
+          <img class="rounded" src="../static/img/K-Means Cluster/3-elbow.png" alt="Third slide">
           <div class="mask rgba-black-light"></div>
         </div>
         <br><br><br><br>
         <div class="carousel-caption">
-          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">TBD</p>
+          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">Importing and fitting model, calculating SSE (sum of squared error), and plotting graphic utilizing The Elbow Method to visualize SSE per k value.</p>
         </div>
       </div>
       <div class="carousel-item text-center">
         <!--Mask color-->
         <div class="view">
-          <img class="rounded" src="../static/img/NLP (Word Cloud+NLTK)/TBD.png"  alt="Fourth slide">
+          <img class="rounded" src="../static/img/K-Means Cluster/4-clusters.png" alt="Fourth slide">
           <div class="mask rgba-black-light"></div>
         </div>
         <br><br><br><br>
         <div class="carousel-caption">
-          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">TBD</p>
+          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">Assigning cluster variables and using K-Means to predict the cluster values.</p>
         </div>
       </div>
       <div class="carousel-item text-center">
         <!--Mask color-->
         <div class="view">
-          <img class="rounded" src="../static/img/NLP (Word Cloud+NLTK)/TBD.png"  alt="Fifth slide">
+          <img class="rounded" src="../static/img/K-Means Cluster/5-kmscore.png" alt="Fifth slide">
           <div class="mask rgba-black-light"></div>
         </div>
-        <br><br><br><br>
+        <br><br><br><br><br>
         <div class="carousel-caption">
-          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">TBD</p>
+          <p class="bg-faded rounded mb-0" style="color: black; font-size: 18px;">Finding the K-Means score which represents the minimized sum of all distances between cluster centers. The larger score we return indicates that we have a large and/or spread dataset.</p>
         </div>
       </div>
     </div>

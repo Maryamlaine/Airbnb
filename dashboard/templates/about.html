@@ -34,7 +34,7 @@
   <!-- Navigation -->
   <nav class="navbar navbar-expand-lg navbar-dark py-lg-4" id="mainNav">
     <div class="container">
-      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">Start Bootstrap</a>
+      <a class="navbar-brand text-uppercase text-expanded font-weight-bold d-lg-none" href="#">LA AirBnB Analysis</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -49,19 +49,14 @@
             <a class="nav-link text-uppercase text-expanded" href="/about">About Project</a>
           </li>
           <li class="nav-item dropdown px-lg-4">
-            <a class="nav-link dropdown-toggle text-uppercase text-expanded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-              Machine Learning
-            </a>
-            <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item text-uppercase text-expanded" href="/machinelearning">Machine Learning Models</a>
-              <a class="dropdown-item text-uppercase text-expanded" href="/machinelearningvis">Machine Learning Visualizations</a>
-            </div>
+            <a class="nav-link text-uppercase text-expanded" href="/machinelearning">Machine Learning</a>
           </li>
           <li class="nav-item dropdown px-lg-4">
             <a class="nav-link dropdown-toggle text-uppercase text-expanded" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Visualizations
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a class="dropdown-item text-uppercase text-expanded" href="/machinelearningvis">Machine Learning Visualizations</a>
               <a class="dropdown-item text-uppercase text-expanded" href="/visuals">Data Exploration</a>
               <a class="dropdown-item text-uppercase text-expanded" href="/tableau">Tableau Visuals</a>
               <a class="dropdown-item text-uppercase text-expanded" href="/index_choropleth">Map Exploration</a>
@@ -74,7 +69,7 @@
 
   <section class="page-section about-heading">
     <div class="container">
-      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="../static/img/about.jpg" alt="aboutimg">
+      <img class="img-fluid rounded about-heading-img mb-3 mb-lg-0" src="../static/img/Site_Img/about.jpg" alt="aboutimg">
       <div class="about-heading-content">
         <div class="row">
           <div class="col-xl-9 col-lg-10 mx-auto">
@@ -85,11 +80,12 @@
               </h2>
               <p class="mb-3">Airbnb is a vacation rental online marketplace.  They connect vacationers and people searching for short-term stays with the appropriate available properties.  Airbnb acts as the liaison between these parties and collects a percentage of the rental price as a fee for their efforts of bringing them together.</p>
               <p class="mb-3">Users of the website can filter by lodging type, date, location, price, and other features. Hosts have expectations like number of allowed guests, rules, and cleaning terms.</p><br>
-              <p class="mb-3">The goal of our project was to employ the use of both supervised and unsupervised machine learning models to explore any connections and relationships between these variables found within our LA AirBnB dataset.</p>
-              <p class="mb-3"></p>By using supervised models such as Naive Bayes, NLP, LDA Topic Modelling, and XGBoost4, we trained our model with language and pattern recognition suited to our dataset, and predicted outcomes for the nature of reviews (positive or negative), the review scores, and listing prices. By using an unsupervised K-Means model, we clustered our dataset by variables such as price, cleaning fee, security deposit, and the neighborhood the listing is located in.</p><br>
+              <p class="mb-3">The goal of our project was to employ the use of both supervised and unsupervised machine learning models to explore any connections and relationships between these variables found within our LA AirBnB dataset, and to determine which neighborhoods are the least/most expensive.</p>
+              <p class="mb-3"></p>By using supervised models such as Naive Bayes, NLP-LDA Topic Modeling, and XGBoost4, we trained our model with language and pattern recognition suited to our dataset, and predicted outcomes for the nature of reviews (positive or negative), the review scores, and listing prices. By using an unsupervised K-Means model, we clustered our dataset by variables such as price, cleaning fee, security deposit, and the neighborhood the listing is located in.</p><br>
               <div class="intro-button mx-auto text-center">
                 <a class="btn btn-primary btn-xl" href="https://github.com/Maryamlaine/Airbnb" target="_blank" rel="noopener noreferrer">Project GitHub</a>
-              </div>
+              </div><br>
+              <p class="mb-0">Our datasets are hosted via AWS. You can find a link to the dataset we used <a href="http://insideairbnb.com/get-the-data.html" target="_blank" rel="noopener noreferrer">here</a>.</p>
             </div>
           </div>
         </div>
