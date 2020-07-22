@@ -116,6 +116,13 @@ This is the fundamental concept of the boosting technique: Leveraging many diffe
       * Ran a Decision Tree Regression Model against our data for predictions and determined the R2 value to be 0.349.
 
       ![8-dectreereg](dashboard/static/img/XGBoost4/8-dectreereg.png)
+      
+      * Residuals graphs for four models above: 
+      
+   ![linreg](dashboard/static/img/MLvis/linreg.png)
+   ![xgbreg](dashboard/static/img/MLvis/xgbreg.png)
+   ![lassoreg](dashboard/static/img/MLvis/lassoreg.png)
+   ![dectreereg](dashboard/static/img/MLvis/dectreereg.png)
 
 ## K-Means Clustering
 
@@ -201,10 +208,6 @@ Naive bayes is a predictive modeling problem that involves assigning a given inp
    ![neg_wc](dashboard/static/img/MLvis/neg_wc.png)
 ![top30_pos](dashboard/static/img/MLvis/top30_pos.png)
 ![top30_neg](dashboard/static/img/MLvis/top30_neg.png)
-   ![linreg](dashboard/static/img/MLvis/linreg.png)
-   ![xgbreg](dashboard/static/img/MLvis/xgbreg.png)
-   ![lassoreg](dashboard/static/img/MLvis/lassoreg.png)
-   ![dectreereg](dashboard/static/img/MLvis/dectreereg.png)
 
 # Conclusions
 
