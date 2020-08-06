@@ -126,7 +126,7 @@ This is the fundamental concept of the boosting technique: Leveraging many diffe
 
 ## K-Means Clustering
 
-Utilized an unsupervised model of K-Means Clustering to generate clusters. By finding the K-Means score of our dataset, we're able to determine the minimized sum of all distances between cluster centers. We returned a K-Means score of -4.308237925188447 which indicates a large spread in our data values. This value is a correct representation of our data, as we examine a large amount of LA neighborhoods with a wide range of distance between them.
+Utilized an unsupervised model of K-Means Clustering to generate clusters. By finding the K-Means score of our dataset, we're able to determine the minimized sum of all distances between cluster centers. We returned a K-Means score of -5375355767452216.0 which indicates a large spread in our data values. This value is a correct representation of our data, as we examine a large amount of LA neighborhoods with a wide range of distance between them.
 
    * Prepared dataset and created PCA (principal component analysis) dataframe.
 
@@ -143,6 +143,10 @@ Utilized an unsupervised model of K-Means Clustering to generate clusters. By fi
    * Determined our K-Means score.
 
    ![5-kmscore](dashboard/static/img/K-Means_Cluster/5-kmscore.png)
+	
+   * Drew a map for similar properties in Bverly Grove. This map can be populated for each neighbourhood.
+
+   ![6-map](dashboard/static/img/Vis/kmeans_map.jpg)
 
 
 ## Naive Bayes
