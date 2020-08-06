@@ -146,7 +146,7 @@ Utilized an unsupervised model of K-Means Clustering to generate clusters. By fi
 	
    * Drew a map for similar properties in Bverly Grove. This map can be populated for each neighbourhood.
 
-   ![6-map](dashboard/static/img/Vis/kmeans_map.jpg)
+   ![6-map](dashboard/static/img/K-Means_Cluster/6-kmap.jpg)
 
 
 ## Naive Bayes
