@@ -75,7 +75,7 @@ Latent Dirichlet Allocation (LDA) is an example of topic model where each docume
    ![3-top30](dashboard/static/img/NLP-LDA/3-top30.png)
 
 
-## XGBoost4
+## XGBoost
 
 A model known for getting high levels of accuracy in machine learning models without doing much tuning, and agile performance.
 Boosting works in such a way that many different decision trees are built. Each of these individual trees work to provide some vital piece of information for prediction, despite not being strong individually. The whole is worth more than the sum of its parts, so to speak. 
@@ -208,10 +208,10 @@ Naive bayes is a predictive modeling problem that involves assigning a given inp
 2. [Airbnb_LA](https://public.tableau.com/views/Airbnb_LA/Dashboard1?:language=en&:display_count=y&publish=yes&:origin=viz_share_link)
 
 * Images Created Through Machine Learning
-   ![pos_wc](dashboard/static/img/MLvis/pos_wc.png)
-   ![neg_wc](dashboard/static/img/MLvis/neg_wc.png)
-![top30_pos](dashboard/static/img/MLvis/top30_pos.png)
-![top30_neg](dashboard/static/img/MLvis/top30_neg.png)
+	![pos_wc](dashboard/static/img/MLvis/pos_wc.png)
+	![neg_wc](dashboard/static/img/MLvis/neg_wc.png)
+	![top30_pos](dashboard/static/img/MLvis/top30_pos.png)
+	![top30_neg](dashboard/static/img/MLvis/top30_neg.png)
 
 # Conclusions
 
